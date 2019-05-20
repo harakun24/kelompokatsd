@@ -1,0 +1,66 @@
+<div ng-controller="home">
+  <!--menu utama-->
+  <div class="row top-content">
+    <div class="col-lg-6">
+      <img
+        clas="img-responsive"
+        width="100%"
+        src="https://images.unsplash.com/photo-1531062563406-03bb0697bd4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+        alt=""
+      />
+    </div>
+    <div class="col-lg-5 top-konten">
+      <h1>ini judul</h1>
+      <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;ahgie fanh faef afafnhafnw fnawfnoafwn anwfonaf
+        oawjfnoawnf ojnaw fnwfa fofjwofnow nalfnawflawfaf awjfoawfjn;f ajfa
+        wfnoawf;of;awn;fna;fn ffjawfonw;f nawfawf awojr;or;o afojwf;ajf;af
+        jafoj;oafj;jaf; owfaojfoj;a pakwfkawfp
+      </p>
+      <button class="btn btn-sm btn-success pull-right">next</button>
+    </div>
+  </div>
+
+  <!--info kampus-->
+  <div class="row container-fluid">
+    <div class="panel panel-info col-lg-3 menu-3" ng-repeat="list in info">
+      <h1>{{ list.title }}</h1>
+      <p>{{ list.fill }}</p>
+      <a href="#">dawdawd</a>
+    </div>
+    <button class="btn btn-sm btn-info pull-right">selengkapnya</button>
+  </div>
+
+  <!--pmb-->
+  <div class="row container-fluid pmb ">
+    <div class="col-lg-8">
+      <h1>Ini menu PMB</h1>
+      <p>
+        ini adalah deskripsi awdnawldnlwd wdnawd addanwdad amwdlandanwd wdjmad
+        adwda ddiaw dawd po ionion necn aefjapofn fofln fnwflanf jgpenfk ranr
+        fnaefn femnf.
+      </p>
+    </div>
+    <div class="col-lg-4 info-pmb r">
+      <p>Sepertinya anda tertarik! klik link berikut</p>
+      <button ui-sref="info-pmb()" class="btn btn-info">
+        info selengkapnya
+      </button>
+      <p>Mau langsung daftar? Yuk mari...</p>
+      <button ui-sref="daftar()" class="btn btn-primary">
+        Pendaftaran baru
+      </button>
+    </div>
+  </div>
+
+  <!--update-->
+  <div class="row container-fluid">
+    <div class="col-lg-12 update panel">
+      <h4>E-learning Update</h4>
+      <span class="col-lg-3" ng-repeat="list in update">
+        <h1 ui-sref="{{ list.url }}">{{ list.title }}</h1>
+        <p>{{ list.unit }}</p>
+      </span>
+    </div>
+  </div>
+</div>

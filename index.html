@@ -1,11 +1,48 @@
+<!DOCTYPE html>
 <html>
-  <head> </head>
-  <body>
-    <h1>hai</h1>
-    <header>efhqdeawqhoi</header>
-    <p>akdgbikabdba</p>
-    <p>awuigdawuodlnjkl</p>
-    <b>edit</b>
-    <footer>dimas</footer>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </meta>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+  <script src="./js/query.js"></script>
+  <script src="./bootstrap/bootstrap.min.js"></script>
+  <script src="./js/angular.js"></script>
+  <script src="./js/ui-router.js"></script>
+  <script src="./app/app.js"></script>
+  <script src="./app/router.js"></script>
+  <script src="./app/controller.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app="app">
+  <div ng-controller="nav">
+    <!--menu user-->
+    <div class="container-fluid menu-user">
+      <ul class="nav navbar-nav pull-right">
+        <li class="navbar-item" ng-repeat="list in sign">
+          <a ui-sref="{{ list.url }}" class="navbar-link">{{ list.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!--nav kampus-->
+    <div class="container-fluid menu-amikom">
+      <ul class="nav navbar-nav pull-right">
+        <li class="navbar-item" ng-repeat="list in menu">
+          <a ui-sref="{{ list.url }}" class="navbar-link">{{ list.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!--isi konten-->
+  <div ui-view>
+  </div>
+
+    <!--footer-->
+    <div class="row panel-footer">ini adalah footer</div>
+</body>
+
 </html>

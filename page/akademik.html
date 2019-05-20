@@ -1,0 +1,67 @@
+<div ng-controller="akademik">
+  <!--List Prodi-->
+  <div
+    class="container panel panel-success prog-akademik"
+    style="background-color: rgba(0, 128, 0, 0.267);"
+  >
+    <h4>Program Akademik</h4>
+    <div ng-repeat="list in daftar" class="row">
+      <h5 style="text-align: center">Program {{ list.name }}</h5>
+      <div
+        class="panel col-lg-2 col-md-3 col-sm-4 panel-default display-prodi"
+        ng-repeat="lit in list.isi"
+      >
+        <h6>
+          <b>{{ lit.prodi }}</b>
+        </h6>
+        <div class="col-lg-12" style=" font-size: 75%;">
+          Semester {{ lit.semester }} Tahun Akademik {{ lit.tahun }}
+        </div>
+        <div class="col-lg-12" style=" font-size: 75%;">
+          <h6>
+            <b>Total SKS: {{ lit.sks }}</b>
+          </h6>
+        </div>
+        <button class="btn btn-sm btn-primary" ui-sref="{{ lit.url }}">
+          Selengkapnya
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--informasi akademik-->
+  <div class="row container-fluid">
+    <div
+      class="panel panel-info col-lg-3 menu-3 col-md-4"
+      ng-repeat="list in info"
+    >
+      <h4>{{ list.title }}</h4>
+      <p>dipublikasikan tanggal {{ list.tanggal }}</p>
+      <a ui-sref="{{ list.url }}">pergi</a>
+    </div>
+  </div>
+
+  <!--info kampus-->
+  <div class="row" style="background-color: yellow">
+    <div class="container col-lg-4">
+      <h4>Info Kampus</h4>
+      <div class="panel panel-primary" ng-repeat="list in kampus">
+        ini konten ke-{{ list }}
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <h1>
+        <strike> kawan sudah mudik</strike><sub> Kalender dan Jadwal</sub>
+      </h1>
+      <div
+        class="col-lg-4 panel"
+        ng-repeat="list in jadwal"
+        style="margin-left:10%"
+      >
+        <h4>
+          <a href="{{ list.url }}">{{ list.name }}</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
