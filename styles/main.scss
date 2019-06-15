@@ -31,3 +31,16 @@ body {
 .display-prodi {
   margin-left: 5%;
 }
+.ng-scope.ng-enter {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  opacity: 0;
+  &.ng-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.award {
+  height: 60px;
+  overflow: hidden;
+  font-size: 80%;
+}
