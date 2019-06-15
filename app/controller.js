@@ -346,3 +346,59 @@ app.controller("prodi", $scope => {
     }
   ];
 });
+app.controller("daftar", $scope => {
+  $scope.gel = [
+    {
+      name: "KHUSUS ",
+      from: "03-12-2018",
+      till: "06-04-2019"
+    },
+    {
+      name: "I ",
+      from: "07-04-2019",
+      till: "10-05-2019"
+    },
+    {
+      name: "II ",
+      from: "11-05-2019",
+      till: "29-06-2019"
+    },
+    {
+      name: "III ",
+      from: "30-06-2019",
+      till: "23-08-2019"
+    }
+  ];
+  $scope.menu = [
+    {
+      name: "Alur Pendaftaran",
+      link: "http://pmb.amikom.ac.id/images/alur.png",
+      icon: "1"
+    },
+    {
+      name: "Jadwal PSU",
+      link: "http://pmb.amikom.ac.id/index.php/jadwal_psu",
+      icon: "2"
+    },
+    {
+      name: "PPM",
+      link: "http://ppm.amikom.ac.id/",
+      icon: "3"
+    },
+    {
+      name: "Profil",
+      link: "http://amikom.ac.id/public/pdf_profile/Profil_2019.pdf",
+      icon: "4"
+    },
+    {
+      name: "Denah",
+      link: "http://public.amikom.ac.id/pmb/denah_amikom.jpg",
+      icon: "5"
+    },
+    {
+      name: "ITC",
+      link: "http://itc.amcc.or.id/",
+      icon: "6"
+    }
+  ];
+});

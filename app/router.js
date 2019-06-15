@@ -24,6 +24,21 @@ app.config(($stateProvider, $locationProvider) => {
       templateUrl: "page/award.html"
     })
     .state({
+      name: "alm",
+      url: "/alumni",
+      templateUrl: "page/alumni.html"
+    })
+    .state({
+      name: "daftar",
+      url: "/Pendaftaran",
+      templateUrl: "page/pendaftaran.html"
+    })
+    .state({
+      name: "ortu",
+      url: "/orang_tua",
+      templateUrl: "page/orangtua.html"
+    })
+    .state({
       name: "prodi",
       url: "/Program_Studi",
       templateUrl: "page/prodi.html"

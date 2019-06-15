@@ -1,0 +1,70 @@
+<div class="container" ng-controller="daftar">
+  <!--Slide Show-->
+  <div class="container-fluid">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active sheight">
+          <img class="d-block w-100" src="../images/2.jpg" alt="First slide" />
+        </div>
+        <div class="carousel-item sheight">
+          <img class="d-block w-100" src="../images/3.jpg" alt="Second slide" />
+        </div>
+        <div class="carousel-item sheight">
+          <img class="d-block w-100" src="../images/4.jpg" alt="Third slide" />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container-fluid panel-info panel pmb-panel">
+    <h4>Pendaftaran Reguler D3-S1</h4>
+    <div
+      class="panel panel-info col-lg-3 col-md-3 col-sm-3 pmb"
+      ng-repeat="list in gel"
+    >
+      <h5>GELOMBANG {{ list.name }}</h5>
+      {{ list.from }} s/d {{ list.till }}
+    </div>
+    <a href="#" class="btn btn-success"> Selengkapnya</a>
+    <h4>Pendaftaran Alih Jalur S1</h4>
+    <div class="panel panel-info col-lg pmb">
+      <h5>ALIH JALUR</h5>
+      01-07-2018 s/d 01-10-2018
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="col-lg-2 panel panel-info" ng-repeat="list in menu">
+      <a href="{{ list.link }}">{{ list.name }}</a>
+    </div>
+  </div>
+</div>
