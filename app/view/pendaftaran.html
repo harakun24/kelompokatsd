@@ -46,22 +46,33 @@
       </a>
     </div>
   </div>
-  <div class="container-fluid panel-info panel pmb-panel">
-    <h4>Pendaftaran Reguler D3-S1</h4>
-    <div
-      class="panel panel-info col-lg-3 col-md-3 col-sm-3 pmb"
-      ng-repeat="list in gel"
-    >
-      <h5>GELOMBANG {{ list.name }}</h5>
-      {{ list.from }} s/d {{ list.till }}
+  <div class="container-fluid">
+    <div class="container col-lg-8 panel-info panel pmb-panel">
+      <h4>Pendaftaran Reguler D3-S1</h4>
+      <div
+        class="panel panel-info col-lg-3 col-md-3 col-sm-3 pmb"
+        ng-repeat="list in gel"
+      >
+        <h5>GELOMBANG {{ list.name }}</h5>
+        {{ list.from }} s/d {{ list.till }}
+      </div>
+      <a href="#" class="btn btn-success"> Selengkapnya</a>
+      <h4>Pendaftaran Alih Jalur S1</h4>
+      <div class="panel panel-info col-lg pmb">
+        <h5>ALIH JALUR</h5>
+        01-07-2018 s/d 01-10-2018
+      </div>
     </div>
-    <a href="#" class="btn btn-success"> Selengkapnya</a>
-    <h4>Pendaftaran Alih Jalur S1</h4>
-    <div class="panel panel-info col-lg pmb">
-      <h5>ALIH JALUR</h5>
-      01-07-2018 s/d 01-10-2018
+    <div class="container pmb-panel col-lg-4 panel panel-info side">
+      <p><a ui-sref="registrasi()">Pendaftaran D3 & S1</a></p>
+      <p><a ui-sref="#">Pendaftaran S1 Alih Jalur</a></p>
+      <p><a ui-sref="#">Jadwal PMB</a></p>
+      <p><a ui-sref="#">Jadwal PSU</a></p>
+      <p><a ui-sref="#">Kelulusan</a></p>
+      <p><a ui-sref="#">Statistik</a></p>
     </div>
   </div>
+
   <div class="container-fluid">
     <div class="col-lg-2 panel panel-info" ng-repeat="list in menu">
       <a href="{{ list.link }}">{{ list.name }}</a>

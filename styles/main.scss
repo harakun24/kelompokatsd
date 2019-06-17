@@ -39,6 +39,24 @@ body {
     opacity: 1;
   }
 }
+.dosen.ng-enter {
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  transform: translateY(40%);
+  opacity: 0;
+  &.ng-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.dosen.ng-leave {
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.75s;
+  transform: translateY(0%);
+  opacity: 1;
+  &.ng-leave-active {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+}
 .award {
   height: 60px;
   overflow: hidden;
@@ -54,4 +72,77 @@ body {
 }
 .pmb {
   height: 100px;
+}
+.profil {
+  background: rgb(181, 181, 216);
+  height: 60px;
+  width: 60px;
+  position: relative;
+  display: flex;
+  margin-bottom: 4%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 200%;
+    padding-top: 12px;
+  }
+}
+.info {
+  position: relative;
+  line-height: 50%;
+  margin-left: 70px;
+}
+.ainfo {
+  position: relative;
+  left: 0;
+  background: rgb(166, 199, 18);
+}
+.dosen {
+  height: 80px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s;
+  border: {
+    top: 4px solid red;
+    bottom: 4px solid red;
+  }
+  margin-top: 8px;
+  .mg {
+    width: 80px;
+    height: 72px;
+    background: red;
+    position: relative;
+    left: -30px;
+    line-height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+.list {
+  overflow: scroll;
+  height: 50vh;
+}
+.idSearch {
+  position: relative;
+  left: 50%;
+}
+.col-lg-6 > h5 {
+  cursor: pointer;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.25s;
+  &:hover {
+    color: red;
+  }
+}
+.gbr {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+  }
 }

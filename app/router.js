@@ -1,66 +1,93 @@
-app.config(($stateProvider, $locationProvider) => {
+app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
   $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise("/");
   $stateProvider
     .state({
       name: "home",
       url: "/home",
       replace: true,
-      templateUrl: "page/home.html"
+      templateUrl: "./app/view/home.html"
+    })
+    .state({
+      name: "/",
+      url: "/",
+      replace: true,
+      templateUrl: "./app/view/home.html"
     })
     .state({
       name: "akademik",
       url: "/akademik",
       replace: true,
-      templateUrl: "page/akademik.html"
+      templateUrl: "./app/view/akademik.html"
     })
     .state({
       name: "profil",
       url: "/profil",
-      templateUrl: "page/profil.html"
+      templateUrl: "./app/view/profil.html"
     })
     .state({
       name: "award",
       url: "/award",
-      templateUrl: "page/award.html"
+      templateUrl: "./app/view/award.html"
     })
     .state({
       name: "alm",
       url: "/alumni",
-      templateUrl: "page/alumni.html"
+      templateUrl: "./app/view/alumni.html"
     })
     .state({
       name: "daftar",
       url: "/Pendaftaran",
-      templateUrl: "page/pendaftaran.html"
+      templateUrl: "./app/view/pendaftaran.html"
     })
     .state({
       name: "ortu",
       url: "/orang_tua",
-      templateUrl: "page/orangtua.html"
+      templateUrl: "./app/view/orangtua.html"
     })
     .state({
       name: "prodi",
       url: "/Program_Studi",
-      templateUrl: "page/prodi.html"
+      templateUrl: "./app/view/prodi.html"
     })
     .state({
       name: "kuliah",
       url: "/kuliah",
-      templateUrl: "page/kuliah.html"
+      templateUrl: "./app/view/kuliah.html"
     })
     .state({
       name: "org",
       url: "/org",
-      templateUrl: "page/org.html"
+      templateUrl: "./app/view/org.html"
     })
     .state({
       name: "logindosen",
       url: "/login_dosen",
-      templateUrl: "page/ldosen.html"
+      templateUrl: "./app/view/ldosen.html"
+    })
+    .state({
+      name: "sdosen",
+      url: "/aktif_dosen:id",
+      templateUrl: "./app/view/sdosen.html"
+    })
+    .state({
+      name: "berandadosen",
+      url: "/beranda_dosen",
+      templateUrl: "./app/view/dosen.html"
+    })
+    .state({
+      name: "chkd",
+      url: "/dosen_masuk",
+      templateUrl: "./app/view/landing_dosen.html"
+    })
+    .state({
+      name: "registrasi",
+      url: "/registrasi",
+      templateUrl: "./app/view/registrasi.html"
     })
     .state({
       name: "loginmhs",
       url: "/login_mhs",
-      templateUrl: "page/lmhs.html"
+      templateUrl: "./app/view/lmhs.html"
     });
 });

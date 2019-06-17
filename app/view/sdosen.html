@@ -1,0 +1,18 @@
+<div class="container unik" ng-controller="sdosen">
+  <info></info>
+  <div class="row container-fluid">
+    <div class="container col-lg-6">
+      <div class="gbr img-circle pull-right">
+        <img src="{{ dosen.pics }}" alt="" />
+      </div>
+    </div>
+    <div class="container col-lg-6">
+      <h2>{{ dosen.nama }}</h2>
+      <a href="{{ dosen.email }}@amikom.ac.id"
+        >{{ dosen.email }}@amikom.ac.id</a
+      >
+      <p>{{ dosen.sinopsis }}</p>
+      <a ui-sref="chkd()">back</a>
+    </div>
+  </div>
+</div>

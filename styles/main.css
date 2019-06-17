@@ -48,6 +48,34 @@ body {
   opacity: 1;
 }
 
+.dosen.ng-enter {
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  opacity: 0;
+}
+
+.dosen.ng-enter.ng-enter-active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.dosen.ng-leave {
+  -webkit-transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.75s;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.75s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+
+.dosen.ng-leave.ng-leave-active {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  opacity: 0;
+}
+
 .award {
   height: 60px;
   overflow: hidden;
@@ -66,5 +94,105 @@ body {
 
 .pmb {
   height: 100px;
+}
+
+.profil {
+  background: #b5b5d8;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.profil img {
+  width: 200%;
+  padding-top: 12px;
+}
+
+.info {
+  position: relative;
+  line-height: 50%;
+  margin-left: 70px;
+}
+
+.ainfo {
+  position: relative;
+  left: 0;
+  background: #a6c712;
+}
+
+.dosen {
+  height: 80px;
+  -webkit-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s;
+  border-top: 4px solid red;
+  border-bottom: 4px solid red;
+  margin-top: 8px;
+}
+
+.dosen .mg {
+  width: 80px;
+  height: 72px;
+  background: red;
+  position: relative;
+  left: -30px;
+  line-height: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dosen .mg img {
+  width: 100%;
+}
+
+.list {
+  overflow: scroll;
+  height: 50vh;
+}
+
+.idSearch {
+  position: relative;
+  left: 50%;
+}
+
+.col-lg-6 > h5 {
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.25s;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.25s;
+}
+
+.col-lg-6 > h5:hover {
+  color: red;
+}
+
+.gbr {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gbr img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
