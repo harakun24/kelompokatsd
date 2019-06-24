@@ -23,6 +23,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     .state({
       name: "profil",
       url: "/profil",
+      replace: true,
       templateUrl: "./app/view/profil.html"
     })
     .state({
@@ -52,13 +53,23 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     })
     .state({
       name: "kuliah",
-      url: "/kuliah",
-      templateUrl: "./app/view/kuliah.html"
+      url: "/mhs/kuliah",
+      templateUrl: "./app/view/kmhs.html"
     })
     .state({
       name: "org",
       url: "/org",
       templateUrl: "./app/view/org.html"
+    })
+    .state({
+      name: "loginmhs",
+      url: "/mhs/login",
+      templateUrl: "./app/view/lmhs.html"
+    })
+    .state({
+      name: "berandamhs",
+      url: "/mhs/home",
+      templateUrl: "./app/view/mhs.html"
     })
     .state({
       name: "logindosen",
@@ -67,12 +78,22 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     })
     .state({
       name: "sdosen",
-      url: "/aktif_dosen:id",
+      url: "/dosen/:id",
       templateUrl: "./app/view/sdosen.html"
     })
     .state({
+      name: "ndosen",
+      url: "/dosen/:id/nilai",
+      templateUrl: "./app/view/ndosen.html"
+    })
+    .state({
+      name: "mdosen",
+      url: "/dosen/:id/materi",
+      templateUrl: "./app/view/mdosen.html"
+    })
+    .state({
       name: "berandadosen",
-      url: "/beranda_dosen",
+      url: "/dosen/",
       templateUrl: "./app/view/dosen.html"
     })
     .state({
@@ -81,13 +102,41 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
       templateUrl: "./app/view/landing_dosen.html"
     })
     .state({
+      name: "chkm",
+      url: "/mhs_masuk",
+      templateUrl: "./app/view/landing_mhs.html"
+    })
+    .state({
+      name: "riwayat",
+      url: "/dosen/:id/riwayat",
+      templateUrl: "./app/view/rdosen.html"
+    })
+    .state({
+      name: "jdosen",
+      url: "/dosen/:id/jadwal",
+      templateUrl: "./app/view/jdosen.html"
+    })
+    .state({
+      name: "jmhs",
+      url: "/mhs/jadwal",
+      templateUrl: "./app/view/jmhs.html"
+    })
+    .state({
+      name: "pmhs",
+      url: "/mhs/perpustakaan",
+      templateUrl: "./app/view/pmhs.html"
+    })
+    .state({
+      name: "vamhs",
+      url: "/mhs/pembayaran",
+      templateUrl: "./app/view/vamhs.html"
+    })
+    .state({
       name: "registrasi",
       url: "/registrasi",
       templateUrl: "./app/view/registrasi.html"
-    })
-    .state({
-      name: "loginmhs",
-      url: "/login_mhs",
-      templateUrl: "./app/view/lmhs.html"
     });
 });
+function MainCtrl($state) {
+  $state.transitionTo("profil.login");
+}

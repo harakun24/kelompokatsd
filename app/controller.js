@@ -52,6 +52,10 @@ app.controller("chkd", $state => {
   if (localStorage.user != undefined) $state.go("berandadosen");
   else $state.go("logindosen");
 });
+app.controller("chkm", $state => {
+  if (localStorage.user != undefined) $state.go("berandamhs");
+  else $state.go("loginmhs");
+});
 app.controller("sdosen", ($scope, $stateParams) => {
   $scope.user = localStorage.user;
   $scope.name = localStorage.nama;
@@ -63,7 +67,110 @@ app.controller("sdosen", ($scope, $stateParams) => {
     }
   });
 });
+app.controller("rdosen", ($scope, $stateParams) => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+  $scope.id = $stateParams.id;
+  $scope.dosen = null;
+  $.each(akun.dosen, (i, val) => {
+    if ($scope.id == val.email) {
+      $scope.dosen = val;
+    }
+  });
+  $scope.nav = id => {
+    switch (id) {
+      case 1:
+        $(".trio").css("display", "none");
+        $(".pendidikan").css("display", "block");
+        break;
+      case 2:
+        $(".trio").css("display", "none");
+        $(".pekerjaan").css("display", "block");
+        break;
+      default:
+        $(".trio").css("display", "none");
+        $(".mengajar").css("display", "block");
+    }
+  };
+  $scope.nav(1);
+});
+app.controller("mdosen", ($scope, $stateParams) => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+  $scope.id = $stateParams.id;
+  $scope.dosen = null;
+  $.each(akun.dosen, (i, val) => {
+    if ($scope.id == val.email) {
+      $scope.dosen = val;
+    }
+  });
+  $scope.semester = semester;
+  $scope.tahun = tahun;
+});
+app.controller("jdosen", ($scope, $stateParams) => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+  $scope.id = $stateParams.id;
+  $scope.dosen = null;
+  $.each(akun.dosen, (i, val) => {
+    if ($scope.id == val.email) {
+      $scope.dosen = val;
+    }
+  });
+  $scope.jadwal = $scope.dosen.jadwal;
+  console.log($scope.jadwal);
+});
+app.controller("ndosen", ($scope, $stateParams) => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+  $scope.id = $stateParams.id;
+  $scope.dosen = null;
+  $.each(akun.dosen, (i, val) => {
+    if ($scope.id == val.email) {
+      $scope.dosen = val;
+    }
+  });
+  $scope.semester = semester;
+  $scope.tahun = tahun;
+});
 app.controller("formReg", $scope => {
   $scope.formlist = form.single;
   $scope.formOption = form.multi;
+});
+app.controller("lmhs", ($scope, $state) => {
+  $scope.tes = function() {
+    $scope.nama = "";
+    let status = 0;
+    $.each($scope.name, (i, val) => {
+      if ($scope.temp.user == val.user && $scope.temp.pass == val.pass) {
+        localStorage.user = val.user;
+        localStorage.nama = val.name;
+        status = 1;
+      }
+    });
+    if (status == 1) {
+      $state.go("chkm");
+    } else {
+      alert("login gagal!");
+    }
+  };
+  $scope.name = akun.mhs;
+});
+app.controller("mhs", $scope => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+});
+app.controller("kmhs", $scope => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+  $scope.semester = semester;
+  $scope.tahun = tahun;
+});
+app.controller("pmhs", $scope => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
+});
+app.controller("jmhs", $scope => {
+  $scope.user = localStorage.user;
+  $scope.name = localStorage.nama;
 });

@@ -91,7 +91,7 @@ var nav = {
     },
     {
       name: "mahasiswa",
-      url: "loginmhs()"
+      url: "chkm()"
     },
     {
       name: "dosen",
@@ -227,6 +227,16 @@ var akademik = {
     }
   ]
 };
+var semester = ["Ganjil", "Genap", "Remidial Ganjil", "Remidial Genap"];
+var tahun = [
+  "2019/2018",
+  "2018/2017",
+  "2017/2016",
+  "2016/2015",
+  "2015/2014",
+  "2014/2013",
+  "2013/2012"
+];
 var akun = {
   dosen: [
     {
@@ -239,7 +249,185 @@ var akun = {
       nama: "Nuri Cahyono, M.Kom",
       email: "nuricahyono",
       sinopsis: "Live Your Dream",
-      pics: "/images/dosen/nuri.png"
+      pics: "/images/dosen/nuri.png",
+      materi: [
+        {
+          judul: 1,
+          semester: "Ganjil",
+          sinopsis: "Materi tentang penelitian",
+          download: 23,
+          matkul: "Struktur Data",
+          thn: "2019/2018",
+          date: "06-02-2019"
+        },
+        {
+          judul: 2,
+          semester: "Ganjil",
+          sinopsis: "lanjutan materi",
+          download: 12,
+          matkul: "Struktur Data",
+          thn: "2019/2018",
+          date: "13-02-2019"
+        },
+        {
+          judul: 3,
+          semester: "Ganjil",
+          sinopsis: "sebelum uts",
+          download: 5,
+          matkul: "Sistem Operasi",
+          thn: "2018/2017",
+          date: "12-09-2018"
+        },
+        {
+          judul: 1,
+          semester: "Genap",
+          sinopsis: "Materi tentang penelitian",
+          download: 32,
+          matkul: "pemrograman",
+          thn: "2019/2018",
+          date: "24-01-2019"
+        },
+        {
+          judul: 2,
+          semester: "Genap",
+          sinopsis: "tentang OOP",
+          download: 37,
+          matkul: "pemrograman",
+          thn: "2018/2017",
+          date: "08-12-2017"
+        },
+        {
+          judul: 1,
+          semester: "Remidial Ganjil",
+          sinopsis: "Materi mengulang",
+          download: 9,
+          matkul: "Struktur Data",
+          thn: "2019/2018",
+          date: "06-11-2018"
+        },
+        {
+          judul: 2,
+          semester: "Remidial Genap",
+          sinopsis: "Materi susulan",
+          download: 14,
+          matkul: "Pemrograman Web",
+          thn: "2019/2018",
+          date: "11-10-2018"
+        },
+        {
+          judul: 1,
+          semester: "Ganjil",
+          sinopsis: "Materi tentang penelitian",
+          download: 23,
+          matkul: "Struktur Data",
+          thn: "2017/2016",
+          date: "10-09-2016"
+        },
+        {
+          judul: 2,
+          semester: "Ganjil",
+          sinopsis: "Lanjutan..",
+          download: 26,
+          matkul: "Struktur Data",
+          thn: "2017/2016",
+          date: "17-09-2016"
+        }
+      ],
+      jadwal: [
+        {
+          hari: "SENIN",
+          jam: "10.40 - 12.20",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-04",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "SENIN",
+          jam: "13.20 - 15.00	",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-06",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "SENIN",
+          jam: "15.30 - 17.10",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-01",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "SELASA",
+          jam: "15.30 - 17.10",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-02",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "RABU",
+          jam: "07.00 - 08.40	",
+          matkul: "STRUKTUR DATA",
+          kelas: "18-S1IF-11",
+          ruang: "04.04.02"
+        },
+        {
+          hari: "RABU",
+          jam: "10.40 - 12.20",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-05",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "KAMIS",
+          jam: "13.20 - 15.00",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-S1IF-03",
+          ruang: "L 7.4.1"
+        },
+        {
+          hari: "SABTU",
+          jam: "10.40 - 12.20",
+          matkul: "PEMROGRAMAN",
+          kelas: "18-BCI-01",
+          ruang: "L 6.2.1"
+        },
+        {
+          hari: "SABTU",
+          jam: "14.20 - 16.00",
+          matkul: "STRUKTUR DATA",
+          kelas: "18-S1IF-11",
+          ruang: "L 7.3.2"
+        }
+      ],
+      nilai: [
+        {
+          title: "REKAYASA PERANGKAT LUNAK",
+          prodi: "Informatika",
+          isi: [
+            {
+              judul: "Nilai 190302332 - ST063_7_2018/2019",
+              tanggal: "13-02-2019 (09:18:00)"
+            },
+            {
+              judul: "Nilai 190302332 - ST063_7_2018/2019",
+              tanggal: "08-02-2019 (12:48:00)"
+            }
+          ]
+        },
+        {
+          title: "PEMROGRAMAN LANJUT",
+          prodi: "Informatika",
+          isi: [
+            {
+              judul: "Nilai 190302332 - ST122_7_2018/2019",
+              tanggal: "13-02-2019 (09:18:00)"
+            },
+            {
+              judul: "Nilai 190302332 - ST122_7_2018/2019",
+              tanggal: "06-02-2019 (10:50:00)"
+            }
+          ]
+        }
+      ]
     },
     {
       nama: "Rakhma Safrida Kurnia, S.Kom., M.Kom",

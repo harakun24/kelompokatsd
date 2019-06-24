@@ -11,3 +11,9 @@ app.directive("info", () => {
   dir.templateUrl = "app/view/akun.html";
   return dir;
 });
+app.directive("app", () => {
+  var dir = {};
+  dir.restrict = "E";
+  dir.templateUrl = "app/view/app.html";
+  return dir;
+});

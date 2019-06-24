@@ -137,12 +137,97 @@ body {
   }
 }
 .gbr {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: black;
   img {
     width: 100%;
+  }
+}
+.dmenu {
+  text-align: center;
+  height: 120px;
+  line-height: 120px;
+  display: flex;
+  justify-content: center;
+  & > .panel {
+    margin-left: 15px;
+  }
+}
+.navik {
+  & > li {
+    cursor: pointer;
+  }
+}
+.trio {
+  line-height: 250%;
+  display: none;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.mtr {
+  height: 200px;
+}
+.awal {
+  background: green;
+  height: 250px;
+}
+.img-rektor {
+  height: 100%;
+  & > img {
+    height: 100%;
+  }
+}
+.vm {
+  height: 250px;
+  overflow: scroll;
+}
+.nv > li {
+  list-style: none;
+}
+.wrp {
+  display: flex;
+  justify-content: center;
+}
+.pnl {
+  height: 300px;
+  & div {
+    float: left;
+    height: 98%;
+    &:nth-child(1) {
+      & .container {
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 80px;
+        top: 15px;
+        & img {
+          width: 150%;
+        }
+      }
+
+      & .col-lg-12 {
+        height: 20%;
+        position: relative;
+        background: yellow;
+        top: 30%;
+        & .bt {
+          position: absolute;
+          top: -100%;
+          left: 18%;
+        }
+      }
+    }
+    &:nth-child(2) {
+      & .nav {
+        width: 100%;
+      }
+    }
   }
 }

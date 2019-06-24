@@ -1,0 +1,27 @@
+<div class="container-fluid" ng-controller="jdosen">
+  <info></info>
+  <div class="container-fluid pull-right">
+    <a ui-sref="sdosen({id:id})">back</a>
+  </div>
+  <div class="container">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>HARI</th>
+          <th>JAM</th>
+          <th>MATAKULIAH</th>
+          <th>KELAS</th>
+          <th>RUANG</th>
+        </tr>
+      </thead>
+
+      <tr ng-repeat="list in jadwal">
+        <td>{{ list.hari }}</td>
+        <td>{{ list.jam }}</td>
+        <td>{{ list.matkul }}</td>
+        <td>{{ list.kelas }}</td>
+        <td>{{ list.ruang }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

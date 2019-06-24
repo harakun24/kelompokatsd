@@ -1,5 +1,8 @@
-<div class="container unik" ng-controller="sdosen">
+<div class="container-fluid unik" ng-controller="sdosen">
   <info></info>
+  <div class="container-fluid pull-right">
+    <a ui-sref="chkd()">back</a>
+  </div>
   <div class="row container-fluid">
     <div class="container col-lg-6">
       <div class="gbr img-circle pull-right">
@@ -12,7 +15,20 @@
         >{{ dosen.email }}@amikom.ac.id</a
       >
       <p>{{ dosen.sinopsis }}</p>
-      <a ui-sref="chkd()">back</a>
+    </div>
+  </div>
+  <div class="row container-fluid dmenu">
+    <div class="col-lg-2 panel panel-info">
+      <a ui-sref="riwayat({id: id })">Riwayat</a>
+    </div>
+    <div class="col-lg-2 panel panel-info">
+      <a ui-sref="mdosen({id: id })">Materi Perkuliahan</a>
+    </div>
+    <div class="col-lg-2 panel panel-info">
+      <a ui-sref="jdosen({id: id })">Jadwal Mengajar</a>
+    </div>
+    <div class="col-lg-2 panel panel-info">
+      <a ui-sref="ndosen({id: id })">Nilai Perkuliahan</a>
     </div>
   </div>
 </div>

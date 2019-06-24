@@ -1,0 +1,135 @@
+<div class="container-fluid" ng-controller="kmhs">
+  <info></info>
+  <div class="container-fluid pull-right">
+    <a ui-sref="chkm()">back</a>
+  </div>
+  <div class="card col-lg-4 pull-right ">
+    <div class="nav navik">
+      <li class="nav-item">
+        <a class="nav-link" ng-click="nav(1)">Rencana Studi(KRS)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-click="nav(2)">Kartu Hasil Studi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-click="nav(3)">Transkrip Nilai</a>
+      </li>
+    </div>
+  </div>
+
+  <div class="container row panel panel-info pull-right">
+    <div class="row container khs">
+      <div class="container row col-lg-3">
+        <div class="container col-lg-6">
+          <b class="col-lg-12">Semester</b>
+          <select
+            ng-model="smt"
+            ng-options="list for list in semester"
+          ></select>
+        </div>
+        <div class="container col-lg-6">
+          <b class="col-lg-12">Tahun</b>
+          <select ng-model="thn" ng-options="list for list in tahun"></select>
+        </div>
+      </div>
+      <table class="table table-striped col-lg-12">
+        <thead class="thead-dark">
+          <tr>
+            <th>NO.</th>
+            <th>KODE</th>
+            <th>MATA KULIAH</th>
+            <th>SKS</th>
+            <th>NILAI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>ST001</td>
+            <td>PENDIDIKAN PANCASILA</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>ST003</td>
+            <td>PENDIDIKAN AGAMA (NON MUSLIM)</td>
+            <td>2</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>ST008</td>
+            <td>BAHASA INGGRIS I</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>ST011</td>
+            <td>MANAJEMEN UMUM</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>ST068</td>
+            <td>ALGORITMA DAN PEMROGRAMAN</td>
+            <td>4</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>ST070</td>
+            <td>ETIKA PROFESI</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>ST081</td>
+            <td>LOGIKA INFORMATIKA</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>ST092</td>
+            <td>ALJABAR LINIER DAN MATRIKS</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>ST137</td>
+            <td>KALKULUS</td>
+            <td>2</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>ST138</td>
+            <td>FOTOGRAFI</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>ST139</td>
+            <td>PENGANTAR ILMU KOMPUTER</td>
+            <td>2</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button class="btn btn-outline-warning">PRINT KHS</button>
+            </td>
+            <td></td>
+            <td>Jumlah SKS:24</td>
+            <td>Index Prestasi:3.83</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
