@@ -1,6 +1,7 @@
 app.controller("home", $scope => {
+  $(".carousel-item:eq(0)").addClass("active");
   $scope.lists = home.list;
-
+  $scope.news = news;
   $scope.info = home.info;
   $scope.update = home.update;
 });

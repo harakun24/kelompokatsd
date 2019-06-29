@@ -27,7 +27,7 @@
   <div ng-controller="nav">
     <!--menu user-->
     <div class="container-fluid menu-user navbar navbar-expand-sm">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav ml-auto">
         <li class="nav-item" ng-repeat="list in sign" style="padding-left: 8px;">
           <a ui-sref="{{ list.url }}" class="nav-link">{{ list.name }}</a>
         </li>
@@ -36,12 +36,19 @@
 
     <!--nav kampus-->
     <div class="container-fluid menu-amikom navbar navbar-expand-sm">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav pull-right mr-auto">
+          <li class="nav-item">
+             <img src="./images/icon.png" alt="">
+            </li>
+      </ul>
+      <ul class="nav navbar-nav pull-right ml-auto">
+        
         <li class="nav-item" ng-repeat="list in menu">
           <a ui-sref="{{ list.url }}" class="nav-link">{{ list.name }}</a>
         </li>
       </ul>
     </div>
+    
 
   </div>
 
@@ -50,7 +57,46 @@
   </div>
 
     <!--footer-->
-    <div class="row panel-footer">ini adalah footer</div>
+    <div class="row panel-footer">
+    <div class="col-lg-3">
+      <p>
+          Copyright &#9400; 2019
+<br>
+          UNIVERSITAS AMIKOM YOGYAKARTA
+          <br>
+          All Right Reserved
+      </p>
+    </div>
+    <div class="col-lg-3">
+        <p>
+           <b> MENU</b>
+<br> Sitemap
+<br>Contact
+<br>English Version
+        </p>
+      </div>
+      <div class="col-lg-3">
+          <p>
+             <b>LINKS
+              </b>
+             <br> University Link
+             <br> Suyanto Consulting
+             <br> Battle of Surabaya
+          </p>
+        </div>
+        <div class="col-lg-3">
+            <p>
+               <b> UNIVERSITAS AMIKOM YOGYAKARTA</b>
+               <br> Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
+                
+               <br> Telp: (0274) 884201 - 207
+                
+               <br> Fax: (0274) 884208 Kodepos: 55283
+                
+              <br>  E-Mail: amikom@amikom.ac.id
+            </p>
+          </div>
+    </div>
 </body>
 
 </html>

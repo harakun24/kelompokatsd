@@ -4,16 +4,73 @@
 body {
   margin: 0;
 }
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.25);
+}
 .menu-user {
-  background-color: yellow;
+  background: linear-gradient(90deg, #eda900, #fcc22f);
+  margin-bottom: 0;
+
+  font-size: 85%;
+  height: 40px;
+  & a {
+    color: #59493c;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+  }
+  & li {
+    width: 80px;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+.nav-item img {
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  }
 }
 .menu-amikom {
-  background-color: orange;
+  height: 100px;
+  background: linear-gradient(90deg, #482373, #7136b5);
+
+  & a {
+    color: white;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+
+  & li {
+    width: 80px;
+    text-align: center;
+    img {
+      width: 150%;
+    }
+  }
+}
+.cimg {
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .top-konten {
   button {
-    margin-top: 10%;
+    position: relative;
+    bottom: 0;
+    border: 1px solid #fac71e;
+    background: transparent;
+    color: #fac71e;
+    width: 25%;
+    height: 10%;
+    &:hover {
+      border: 1px solid #fac71e;
+      background: #fac71e;
+      color: white;
+    }
   }
+  height: 50vh;
 }
 .pmb {
   background: green;
@@ -229,5 +286,14 @@ body {
         width: 100%;
       }
     }
+  }
+}
+.panel-footer {
+  background: linear-gradient(90deg, #482373, #7136b5);
+  display: flex;
+  align-items: center;
+  color: white;
+  div {
+    padding-bottom: 25px;
   }
 }

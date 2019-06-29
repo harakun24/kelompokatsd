@@ -90,7 +90,7 @@ var nav = {
       url: "daftar()"
     },
     {
-      name: "mahasiswa",
+      name: "mhs",
       url: "chkm()"
     },
     {
@@ -919,3 +919,30 @@ var form = {
     }
   ]
 };
+var news = [
+  {
+    title:
+      "AMCC AMIKOM Yogyakarta Meraih juara pertama dalam Hackathon Cybertech Politeknik Negeri Padang",
+    img: "c2.jpg",
+    cnt: `Dari 6 tim yang berlaga, Tim AMCC selaku perwakilan Universitas Amikom
+    Yogyakarta berhasil meraih juara pertama dengan aplikasi Smart Edu yang
+    kemudian disusul oleh team Furgetech dari Politeknik Negeri Padang
+    dengan aplikasi ME-Learn dan juara Terfavorit diraih oleh team H-1 dari
+    Universitas Andalas dengan aplikasi Al-Quran untuk Tuna Rungu. Produk
+    yang masih dalam tahap pegembangan ini sudah melalui tahap riset dan
+    validasi pasar serta pendampingan yang dilakukan oleh Kampus
+    (Universitas Amikom Yogyakarta) secara intensif selama 2 bulan.`
+  },
+  {
+    title:
+      "Pelatihan Riset dan Berita Pustekkom Kemendikbud RI di Universitas Amikom Yogyakarta",
+    img: "c1.jpg",
+    cnt: `Pusat Teknologi Informasi dan Komunikasi Pendidikan dan Kebudayaan Kementerian Pendidikan dan Kebudayaan (Pustekkom Kemendikbud) bekerjasama dengan Lembaga Pengabdian Masyarakat (LPM) Universitas Amikom Yogyakarta mengadakan Pelatihan Riset dan Berita Pustekkom Kemendikbud RI selama 4 hari di Kampus Amikom Yogyakarta (22 - 25 April 2019). Agenda pelatihan tersebut dibagi menjadi dua jenis, yaitu : Pelatihan Pengembangan Konten Berita Edukasi serta Pelatihan Riset Pengembangan Program Siaran TV Edukasi dan Suara Edukasi.`
+  },
+  {
+    title:
+      "343 orang Mahasiswa dan alumni Universitas Amikom Yogyakarta mengikuti agenda mudik bareng ke Sumatera, NTB, NTT, dan Sulawesi",
+    img: "c3.jpg",
+    cnt: `Agenda mudik bareng ini merupakan agenda rutin yang sudah diadakan oleh Amikom sejak tahun 2005, Gagasan mudik bersama ini bermula dari rasa empati pihak kampus melihat banyak mahasiswa yang tidak bisa pulang ke kampung halaman. Saat itu, mudik gratis amikom diawali dengan tujuan ke Jakarta dan Surabaya hingga saat ini sampai ke luar jawa. Melalui agenda Mudik Bareng Amikom 2019 ini, diharapkan kebersamaan antar mahasiswa dan lembaga bisa semakin kokoh, sehingga ke depan mampu bersama-sama membesarkan Universitas Amikom Yogyakarta.`
+  }
+];

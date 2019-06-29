@@ -6,16 +6,94 @@ body {
   margin: 0;
 }
 
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 .menu-user {
-  background-color: yellow;
+  background: -webkit-gradient(linear, left top, right top, from(#eda900), to(#fcc22f));
+  background: linear-gradient(90deg, #eda900, #fcc22f);
+  margin-bottom: 0;
+  font-size: 85%;
+  height: 40px;
+}
+
+.menu-user a {
+  color: #59493c;
+  -webkit-transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+}
+
+.menu-user li {
+  width: 80px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.nav-item img {
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.nav-item img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .menu-amikom {
-  background-color: orange;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, right top, from(#482373), to(#7136b5));
+  background: linear-gradient(90deg, #482373, #7136b5);
+}
+
+.menu-amikom a {
+  color: white;
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.menu-amikom li {
+  width: 80px;
+  text-align: center;
+}
+
+.menu-amikom li img {
+  width: 150%;
+}
+
+.cimg {
+  height: 50vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-konten {
+  height: 50vh;
 }
 
 .top-konten button {
-  margin-top: 10%;
+  position: relative;
+  bottom: 0;
+  border: 1px solid #fac71e;
+  background: transparent;
+  color: #fac71e;
+  width: 25%;
+  height: 10%;
+}
+
+.top-konten button:hover {
+  border: 1px solid #fac71e;
+  background: #fac71e;
+  color: white;
 }
 
 .pmb {
@@ -305,5 +383,21 @@ body {
 
 .pnl div:nth-child(2) .nav {
   width: 100%;
+}
+
+.panel-footer {
+  background: -webkit-gradient(linear, left top, right top, from(#482373), to(#7136b5));
+  background: linear-gradient(90deg, #482373, #7136b5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.panel-footer div {
+  padding-bottom: 25px;
 }
 /*# sourceMappingURL=main.css.map */
