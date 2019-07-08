@@ -1,7 +1,10 @@
 <div class="container" ng-controller="formReg">
-  <form action="">
+  <div class="container-fluid fff">
+
+  </div>
+  <form action="" class="mmm">
     <h4>Biodata</h4>
-    <div class="col-lg-6">
+    <div class="col-lg-5 panel pann">
       <div class="container" ng-repeat="list in formlist | limitTo:4" data-aos="fade-right">
         <tr>
           <td>
@@ -69,7 +72,7 @@
         </tr>
       </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-5 panel pann" posisi="dua">
       <div class="container" ng-repeat="list in formlist | limitTo:2:4" data-aos="fade-left">
         <tr>
           <td>
@@ -169,53 +172,55 @@
       </div>
     </div>
     <div class="col-lg-12"><h4>Pilihan Jurusan</h4></div>
-
-    <div class="col-lg-6">
-      <div
-        class="container"
-        ng-repeat="list in formOption | limitTo:2:6"
-        data-aos="fade-right"
-      >
-        <tr>
-          <td>
-            <br />{{ list.title }} <br />
-            <select
-              class="form-control"
-              style="height:34px"
-              name="{{ list.title }}"
-              id=""
-            >
-              <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
-                opt.title
-              }}</option>
-            </select>
-          </td>
-        </tr>
-      </div>
+<div class="col-lg-10 panel pann" posisi="tiga">
+  <div class="col-lg-6">
+    <div
+      class="container"
+      ng-repeat="list in formOption | limitTo:2:6"
+      data-aos="fade-right"
+    >
+      <tr>
+        <td>
+          <br />{{ list.title }} <br />
+          <select
+            class="form-control"
+            style="height:34px"
+            name="{{ list.title }}"
+            id=""
+          >
+            <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
+              opt.title
+            }}</option>
+          </select>
+        </td>
+      </tr>
     </div>
-    <div class="col-lg-6">
-      <div
-        class="container"
-        ng-repeat="list in formOption | limitTo:2:8"
-        data-aos="fade-left"
-      >
-        <tr>
-          <td>
-            <br />{{ list.title }} <br />
-            <select
-              class="form-control"
-              style="height:34px"
-              name="{{ list.title }}"
-              id=""
-            >
-              <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
-                opt.title
-              }}</option>
-            </select>
-          </td>
-        </tr>
-      </div>
+  </div>
+  <div class="col-lg-6">
+    <div
+      class="container"
+      ng-repeat="list in formOption | limitTo:2:8"
+      data-aos="fade-left"
+    >
+      <tr>
+        <td>
+          <br />{{ list.title }} <br />
+          <select
+            class="form-control"
+            style="height:34px"
+            name="{{ list.title }}"
+            id=""
+          >
+            <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
+              opt.title
+            }}</option>
+          </select>
+        </td>
+      </tr>
     </div>
+  </div>
+</div>
+    
     <div class="col-lg-12 container pull-right" data-aos="fade-right">
       <input
         class="btn btn-md btn-sbt"

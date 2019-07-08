@@ -34,6 +34,50 @@ body {
   margin-left: 0;
 }
 
+.pann {
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
+  padding-bottom: 25px;
+}
+
+.pann[posisi="dua"] {
+  margin-left: 30px;
+}
+
+.fff {
+  background: url(../images/mikom.png);
+  height: 150vh;
+  position: absolute;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-animation: puter 3.5s infinite;
+          animation: puter 3.5s infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes puter {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes puter {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .hdd {
   height: 400px;
   margin-top: 10px;
@@ -822,6 +866,7 @@ body {
 .lgin input[type="text"], .lgin input[type="password"] {
   margin-left: 5px;
   width: 100%;
+  border: 1px solid #fac71e;
 }
 
 .lgin button {

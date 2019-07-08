@@ -26,9 +26,34 @@ body {
     margin-left: 0;
   }
 }
+.pann {
+  box-shadow: 0 0 3px black;
+  padding-bottom: 25px;
+  &[posisi="dua"] {
+    margin-left: 30px;
+  }
+}
+.fff {
+  background: url(../images/mikom.png);
+  height: 150vh;
+  position: absolute;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: puter 3.5s infinite;
+  z-index: -1;
+}
+@keyframes puter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .hdd {
   height: 400px;
-  margin-top:10px;
+  margin-top: 10px;
   iframe {
     height: 100%;
   }
@@ -601,6 +626,7 @@ body {
     &[type="password"] {
       margin-left: 5px;
       width: 100%;
+      border: 1px solid #fac71e;
     }
   }
   button {

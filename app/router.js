@@ -6,7 +6,8 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
       name: "home",
       url: "/home",
       replace: true,
-      templateUrl: "./app/view/home.html"
+      templateUrl: "./app/view/home.html",
+      data: { pageTitle: "Home" }
     })
     .state({
       name: "/",
