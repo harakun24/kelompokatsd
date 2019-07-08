@@ -92,7 +92,10 @@
     </div>
   </div>
   <div class="container">
-    <div class="panel panel-info col-lg-2 award" ng-repeat="list in daftar">
+    <div
+      class="panel panel-info col-lg-2 award"
+      ng-repeat="list in daftar track by $index"
+    >
       {{ list }}
     </div>
   </div>

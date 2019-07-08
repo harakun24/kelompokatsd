@@ -44,10 +44,10 @@ body {
   z-index: -1;
 }
 @keyframes puter {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -280,7 +280,7 @@ body {
   height: 80px;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s;
   &:hover {
-    background: rgba(0, 0, 0, 0.233);
+    background: linear-gradient(90deg, rgba(124, 15, 187, 0.438), transparent);
   }
   margin-top: 8px;
   .mg {
@@ -305,17 +305,18 @@ body {
   position: relative;
   left: 50%;
   top: 50px;
+  margin-bottom: 30px;
 }
 .col-lg-6 > h5 {
   cursor: pointer;
   transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.25s;
   &:hover {
-    color: rgb(255, 166, 0);
+    color: rgb(93, 6, 151);
   }
 }
 .gbr {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -326,21 +327,61 @@ body {
 }
 .dmenu {
   text-align: center;
-  height: 120px;
-  line-height: 120px;
+  height: 380px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   margin: {
-    top: 10px;
+    top: -70px;
     bottom: 10px;
   }
-  & > .panel {
+  & div {
     margin-left: 15px;
+    height: 20%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    background: linear-gradient(90deg, #300279, transparent, #300279);
+    a {
+      font-weight: bold;
+    }
+    &:hover {
+      background: #300279;
+      & a {
+        color: white;
+      }
+    }
   }
+}
+.ppo {
+  height: 40vh;
+  overflow: scroll;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.301);
+}
+.rer {
+  display: flex;
+  justify-content: center;
+}
+.oio {
+  background: #7136b5;
+  color: white;
+}
+.thead-purple {
+  background: #1f0052;
+  color: white;
 }
 .navik {
   & > li {
     cursor: pointer;
+  }
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.mengajar {
+  table {
+    margin-top: 20px;
   }
 }
 .trio {
@@ -349,14 +390,23 @@ body {
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
 .mtr {
-  height: 180px;
+  height: 300px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  &:hover {
+    background: #a2d7fa;
+  }
   button {
-    margin-top: 10px;
-    background: #d6660a;
+    margin-top: 0px;
+    background: #0a84d6;
     color: white;
+    height: 50px;
     transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
     &:hover {
-      background: #fac71e;
+      color: #0a84d6;
+      background: white;
+      border: 1px solid #0a84d6;
     }
   }
 }
@@ -367,6 +417,15 @@ body {
 #homepmb {
   background-image: url("../images/Untitled-1.png");
   background-repeat: no-repeat;
+}
+.carimat {
+  width: 120px;
+  margin-left: 0;
+}
+.memangbujank {
+  position: relative;
+  left: -17%;
+  top: -10px;
 }
 .awal {
   background: transparent;
@@ -399,7 +458,20 @@ body {
 }
 .wrp {
   display: flex;
-  justify-content: center;
+  .mr-auto {
+    margin-top: 30px;
+    .img-circle {
+      height: 80px;
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 180%;
+      }
+      overflow: hidden;
+    }
+  }
 }
 .pnl {
   height: 300px;
@@ -429,7 +501,6 @@ body {
 
         & .bt {
           position: absolute;
-
           left: 18%;
         }
       }
@@ -440,6 +511,28 @@ body {
       }
     }
   }
+}
+.lmtr {
+  margin-bottom: 10px;
+}
+.yyu {
+  margin-left: -10%;
+}
+.jkjk {
+  height: 65vh;
+  overflow: scroll;
+}
+.re {
+  text-align: center;
+  .col-lg-12 {
+    margin-left: -18px;
+  }
+}
+.btn-gq {
+  height: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.342);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .panel-footer {
   background: linear-gradient(90deg, #482373, #7136b5);
@@ -589,18 +682,24 @@ body {
   margin-top: 10px;
   transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
   background: linear-gradient(90deg, transparent, transparent);
+  margin-bottom: 10px;
   &:hover {
-    background: linear-gradient(90deg, #fcc22f, transparent);
+    background: linear-gradient(90deg, #5b15dd8e, transparent);
+    h4 {
+      color: white;
+    }
   }
 }
 .ffg {
   margin-left: 10px;
   margin-bottom: 10px;
   & button {
-    background: #d6660a;
+    background: #0a7ad6;
     margin-bottom: 10px;
+    color: white;
     &:hover {
-      background: #ffc107;
+      color: white;
+      background: #5e07ff;
     }
   }
 }
@@ -610,15 +709,20 @@ body {
   margin-bottom: 10vh;
   margin-top: 10vh;
 }
+tr td[colspan="2"] .btn {
+  width: 73%;
+}
 .lgin {
   display: flex;
   justify-content: center;
-  height: 180px;
+  height: 350px;
   align-items: center;
-  border: 1px solid #7136b5;
   margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   form {
     margin-top: 20px;
+    margin-left: -25px;
   }
   input {
     margin-bottom: 10px;
@@ -626,7 +730,6 @@ body {
     &[type="password"] {
       margin-left: 5px;
       width: 100%;
-      border: 1px solid #fac71e;
     }
   }
   button {

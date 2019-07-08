@@ -3,35 +3,48 @@
   <div class="container-fluid pull-right">
     <a ui-sref="sdosen({id:id})">back</a>
   </div>
-  <div class="container row col-lg-3 pull-right">
+  <div class="container row col-lg-3 pull-right memangbujank">
     <div class="container col-lg-6">
       <b class="col-lg-12">Semester</b>
-      <select ng-model="smt" ng-options="list for list in semester"></select>
+      <select
+        ng-model="smt"
+        ng-options="list for list in semester"
+        class="form-control carimat"
+        style="height: 40px;"
+      ></select>
     </div>
     <div class="container col-lg-6">
       <b class="col-lg-12">Tahun</b>
-      <select ng-model="thn" ng-options="list for list in tahun"></select>
+      <select
+        ng-model="thn"
+        ng-options="list for list in tahun"
+        class="form-control carimat"
+        style="height: 40px;"
+      ></select>
     </div>
   </div>
   <div class="container row">
     <div
-      class="container col-lg-4"
+      class="container col-lg-4 lmtr"
       ng-repeat="list in dosen.materi | filter:smt|filter:thn"
     >
       <b>{{ list.date }}</b>
       <div class="card mtr">
         <div class="card-body">
           <h4 class="card-title">Modul {{ list.judul }}</h4>
-          <div class="card-text">
-            <i>Semester {{ list.semester }}</i
-            ><br />
-            {{ list.sinopsis }}<br />
-            <b>Total download: {{ list.download }}</b
-            ><br />
-            {{ list.matkul }}
-          </div>
 
-          <button class="btn-sm btn">Download</button>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <i>Semester {{ list.semester }}</i>
+            </li>
+            <li class="list-group-item">{{ list.sinopsis }}</li>
+            <li class="list-group-item">
+              <b>Total download: {{ list.download }}</b>
+            </li>
+            <li class="list-group-item">{{ list.matkul }}</li>
+          </ul>
+
+          <button class="btn-sm btn col-lg-12">Download</button>
         </div>
       </div>
     </div>

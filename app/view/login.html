@@ -1,10 +1,11 @@
 <div class="container top-lgin">
   <div class="card col-lg-4 lgin">
     <card-body>
+      <img src="./images/iii.png" alt="" />
       <form ng-submit="tes()">
         <table>
           <tr>
-            <td>user ID</td>
+            <td class="col-lg-1"></td>
             <td>
               <input
                 type="text"
@@ -15,7 +16,7 @@
             </td>
           </tr>
           <tr>
-            <td>Password</td>
+            <td class="col-lg-3"></td>
             <td>
               <input
                 type="password"
@@ -31,9 +32,14 @@
               Setuju
             </td>
           </tr>
+          <tr>
+            <td colspan="2">
+              <button value="submit" class="btn btn-md pull-right">
+                MASUK
+              </button>
+            </td>
+          </tr>
         </table>
-
-        <button value="submit" class="btn btn-md pull-right">MASUK</button>
       </form>
     </card-body>
   </div>

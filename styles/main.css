@@ -57,22 +57,22 @@ body {
 }
 
 @-webkit-keyframes puter {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 
 @keyframes puter {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -396,7 +396,8 @@ body {
 }
 
 .dosen:hover {
-  background: rgba(0, 0, 0, 0.233);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(124, 15, 187, 0.438)), to(transparent));
+  background: linear-gradient(90deg, rgba(124, 15, 187, 0.438), transparent);
 }
 
 .dosen .mg {
@@ -427,6 +428,7 @@ body {
   position: relative;
   left: 50%;
   top: 50px;
+  margin-bottom: 30px;
 }
 
 .col-lg-6 > h5 {
@@ -436,12 +438,12 @@ body {
 }
 
 .col-lg-6 > h5:hover {
-  color: #ffa600;
+  color: #5d0697;
 }
 
 .gbr {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,24 +460,88 @@ body {
 
 .dmenu {
   text-align: center;
-  height: 120px;
-  line-height: 120px;
+  height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -70px;
   margin-bottom: 10px;
 }
 
-.dmenu > .panel {
+.dmenu div {
   margin-left: 15px;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: -webkit-gradient(linear, left top, right top, from(#300279), color-stop(transparent), to(#300279));
+  background: linear-gradient(90deg, #300279, transparent, #300279);
+}
+
+.dmenu div a {
+  font-weight: bold;
+}
+
+.dmenu div:hover {
+  background: #300279;
+}
+
+.dmenu div:hover a {
+  color: white;
+}
+
+.ppo {
+  height: 40vh;
+  overflow: scroll;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.301);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.301);
+}
+
+.rer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.oio {
+  background: #7136b5;
+  color: white;
+}
+
+.thead-purple {
+  background: #1f0052;
+  color: white;
+}
+
+.navik {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .navik > li {
   cursor: pointer;
+}
+
+.mengajar table {
+  margin-top: 20px;
 }
 
 .trio {
@@ -486,19 +552,31 @@ body {
 }
 
 .mtr {
-  height: 180px;
+  height: 300px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+
+.mtr:hover {
+  background: #a2d7fa;
 }
 
 .mtr button {
-  margin-top: 10px;
-  background: #d6660a;
+  margin-top: 0px;
+  background: #0a84d6;
   color: white;
+  height: 50px;
   -webkit-transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
   transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
 }
 
 .mtr button:hover {
-  background: #fac71e;
+  color: #0a84d6;
+  background: white;
+  border: 1px solid #0a84d6;
 }
 
 .top-content {
@@ -509,6 +587,17 @@ body {
 #homepmb {
   background-image: url("../images/Untitled-1.png");
   background-repeat: no-repeat;
+}
+
+.carimat {
+  width: 120px;
+  margin-left: 0;
+}
+
+.memangbujank {
+  position: relative;
+  left: -17%;
+  top: -10px;
 }
 
 .awal {
@@ -552,9 +641,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.wrp .mr-auto {
+  margin-top: 30px;
+}
+
+.wrp .mr-auto .img-circle {
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+}
+
+.wrp .mr-auto .img-circle img {
+  width: 180%;
 }
 
 .pnl {
@@ -601,6 +710,35 @@ body {
 
 .pnl div:nth-child(2) .nav {
   width: 100%;
+}
+
+.lmtr {
+  margin-bottom: 10px;
+}
+
+.yyu {
+  margin-left: -10%;
+}
+
+.jkjk {
+  height: 65vh;
+  overflow: scroll;
+}
+
+.re {
+  text-align: center;
+}
+
+.re .col-lg-12 {
+  margin-left: -18px;
+}
+
+.btn-gq {
+  height: 40px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.342);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.342);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .panel-footer {
@@ -808,11 +946,16 @@ body {
   transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
   background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent));
   background: linear-gradient(90deg, transparent, transparent);
+  margin-bottom: 10px;
 }
 
 .ff:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#fcc22f), to(transparent));
-  background: linear-gradient(90deg, #fcc22f, transparent);
+  background: -webkit-gradient(linear, left top, right top, from(#5b15dd8e), to(transparent));
+  background: linear-gradient(90deg, #5b15dd8e, transparent);
+}
+
+.ff:hover h4 {
+  color: white;
 }
 
 .ffg {
@@ -821,12 +964,14 @@ body {
 }
 
 .ffg button {
-  background: #d6660a;
+  background: #0a7ad6;
   margin-bottom: 10px;
+  color: white;
 }
 
 .ffg button:hover {
-  background: #ffc107;
+  color: white;
+  background: #5e07ff;
 }
 
 .top-lgin {
@@ -840,6 +985,10 @@ body {
   margin-top: 10vh;
 }
 
+tr td[colspan="2"] .btn {
+  width: 73%;
+}
+
 .lgin {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,16 +996,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 180px;
+  height: 350px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #7136b5;
   margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .lgin form {
   margin-top: 20px;
+  margin-left: -25px;
 }
 
 .lgin input {
@@ -866,7 +1017,6 @@ body {
 .lgin input[type="text"], .lgin input[type="password"] {
   margin-left: 5px;
   width: 100%;
-  border: 1px solid #fac71e;
 }
 
 .lgin button {

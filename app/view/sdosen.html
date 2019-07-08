@@ -3,7 +3,7 @@
   <div class="container-fluid pull-right">
     <a ui-sref="chkd()">back</a>
   </div>
-  <div class="row container-fluid">
+  <div class="row col-lg-6">
     <div class="container col-lg-6">
       <div class="gbr img-circle pull-right">
         <img src="{{ dosen.pics }}" alt="" />
@@ -17,17 +17,17 @@
       <p>{{ dosen.sinopsis }}</p>
     </div>
   </div>
-  <div class="row container-fluid dmenu">
-    <div class="col-lg-2 panel panel-info">
+  <div class="row col-lg-4 dmenu">
+    <div class="col-lg-10 panel panel-info">
       <a ui-sref="riwayat({id: id })">Riwayat</a>
     </div>
-    <div class="col-lg-2 panel panel-info">
+    <div class="col-lg-10 panel panel-info">
       <a ui-sref="mdosen({id: id })">Materi Perkuliahan</a>
     </div>
-    <div class="col-lg-2 panel panel-info">
+    <div class="col-lg-10 panel panel-info">
       <a ui-sref="jdosen({id: id })">Jadwal Mengajar</a>
     </div>
-    <div class="col-lg-2 panel panel-info">
+    <div class="col-lg-10 panel panel-info">
       <a ui-sref="ndosen({id: id })">Nilai Perkuliahan</a>
     </div>
   </div>

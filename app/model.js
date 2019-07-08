@@ -537,6 +537,16 @@ var award = [
   "HICO, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016",
   "Ahada, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016 ",
   "BTOUCH, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016",
+  "Official Selection, Holland Animation Film Festival 2016",
+  "Grandprize Winner, SICAF 2016, The 20th Seoul International Cartoon and Animation Festival",
+  "Winner Best Animation, 3th Noida International Film Festival 2016",
+  "Nominee International ICT Innovative Service Contest, Taiwan, 2016",
+  "BSmart, Nominee Asia Pacific ICT Award, Taiwan, 2016",
+  "Gablind, Nominee Asia Pacific ICT Award, Taiwan, 2016",
+  "HICO, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016",
+  "Ahada, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016 ",
+  "Gablind, Nominee Asia Pacific ICT Award, Taiwan, 2016",
+  "BTOUCH, Nominee, The use of ICTs in education for disadvantaged groups, UNESCO 2016",
   "Official Selection, Holland Animation Film Festival 2016"
 ];
 var prodi = [
