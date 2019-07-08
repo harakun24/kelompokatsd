@@ -2,20 +2,29 @@
   <form action="">
     <h4>Biodata</h4>
     <div class="col-lg-6">
-      <div class="container" ng-repeat="list in formlist | limitTo:4">
+      <div class="container" ng-repeat="list in formlist | limitTo:4" data-aos="fade-right">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <input type="{{ list.type }}" placeholder="{{ list.ph }}" />
+            <input
+              class="form-control"
+              type="{{ list.type }}"
+              placeholder="{{ list.ph }}"
+            />
           </td>
         </tr>
       </div>
 
-      <div class="container" ng-repeat="list in formOption | limitTo:3">
+      <div class="container" ng-repeat="list in formOption | limitTo:3" data-aos="fade-right">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <select name="{{ list.title }}" id="">
+            <select
+              class="form-control"
+              style="height:34px"
+              name="{{ list.title }}"
+              id=""
+            >
               <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
                 opt.title
               }}</option>
@@ -24,40 +33,66 @@
         </tr>
       </div>
 
-      <div class="container">
+      <div class="container" data-aos="fade-right">
         <tr>
           <td>
             <br />Alamat<br />
-            <textarea name="" id="" cols="30" rows="3"></textarea>
+            <textarea
+              class="form-control"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
           </td>
         </tr>
       </div>
 
-      <div class="container">
+      <div class="container" data-aos="fade-right">
         <tr>
           <td>
             <br />RT / RW<br />
-            <input type="text" maxlength="2" style="width: 30px" />
-            <input type="text" maxlength="2" style="width: 30px" />
+
+            <input
+              class="form-control"
+              type="text"
+              maxlength="2"
+              style="width: 50px;float: left;"
+            />
+            <input
+              class="form-control"
+              type="text"
+              maxlength="2"
+              style="width: 50px;position: relative;left:5px;"
+            />
           </td>
         </tr>
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="container" ng-repeat="list in formlist | limitTo:2:4">
+      <div class="container" ng-repeat="list in formlist | limitTo:2:4" data-aos="fade-left">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <input type="{{ list.type }}" placeholder="{{ list.ph }}" />
+            <input
+              class="form-control"
+              type="{{ list.type }}"
+              placeholder="{{ list.ph }}"
+            />
           </td>
         </tr>
       </div>
 
-      <div class="container" ng-repeat="list in formOption | limitTo:2:3">
+      <div class="container" ng-repeat="list in formOption | limitTo:2:3" data-aos="fade-left">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <select name="{{ list.title }}" id="">
+            <select
+              class="form-control"
+              style="height:34px"
+              name="{{ list.title }}"
+              id=""
+            >
               <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
                 opt.title
               }}</option>
@@ -66,20 +101,29 @@
         </tr>
       </div>
 
-      <div class="container" ng-repeat="list in formlist | limitTo:2:6">
+      <div class="container" ng-repeat="list in formlist | limitTo:2:6" data-aos="fade-left>
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <input type="{{ list.type }}" placeholder="{{ list.ph }}" />
+            <input
+              class="form-control"
+              type="{{ list.type }}"
+              placeholder="{{ list.ph }}"
+            />
           </td>
         </tr>
       </div>
 
-      <div class="container" ng-repeat="list in formOption | limitTo:1:5">
+      <div class="container" ng-repeat="list in formOption | limitTo:1:5" data-aos="fade-left">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <select name="{{ list.title }}" id="">
+            <select
+              class="form-control"
+              style="height:34px"
+              name="{{ list.title }}"
+              id=""
+            >
               <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
                 opt.title
               }}</option>
@@ -88,30 +132,37 @@
         </tr>
       </div>
 
-      <div class="container" ng-repeat="list in formlist | limitTo:1:8">
+      <div class="container" ng-repeat="list in formlist | limitTo:1:8"  data-aos="fade-left">
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <input type="{{ list.type }}" placeholder="{{ list.ph }}" />
+            <input
+              class="form-control"
+              type="{{ list.type }}"
+              placeholder="{{ list.ph }}"
+            />
           </td>
         </tr>
       </div>
 
-      <div class="container">
+      <div class="container" data-aos="fade-left">
         <tr>
           <td>
             <br />Rata-Rata NEM<br />
             <input
+              class="form-control"
               type="text"
               maxlength="1"
-              style="width: 30px"
               placeholder="0"
-            />,
+              style="width: 50px;float: left;"
+            />
+            <p style="float: left;font-size:180%"><sub>,</sub></p>
             <input
+              class="form-control"
               type="text"
               maxlength="2"
-              style="width: 30px"
               placeholder="00"
+              style="width: 50px;position: relative;left:5px;"
             />
           </td>
         </tr>
@@ -120,11 +171,20 @@
     <div class="col-lg-12"><h4>Pilihan Jurusan</h4></div>
 
     <div class="col-lg-6">
-      <div class="container" ng-repeat="list in formOption | limitTo:2:6">
+      <div
+        class="container"
+        ng-repeat="list in formOption | limitTo:2:6"
+        data-aos="fade-right"
+      >
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <select name="{{ list.title }}" id="">
+            <select
+              class="form-control"
+              style="height:34px"
+              name="{{ list.title }}"
+              id=""
+            >
               <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
                 opt.title
               }}</option>
@@ -134,11 +194,20 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="container" ng-repeat="list in formOption | limitTo:2:8">
+      <div
+        class="container"
+        ng-repeat="list in formOption | limitTo:2:8"
+        data-aos="fade-left"
+      >
         <tr>
           <td>
             <br />{{ list.title }} <br />
-            <select name="{{ list.title }}" id="">
+            <select
+              class="form-control"
+              style="height:34px"
+              name="{{ list.title }}"
+              id=""
+            >
               <option ng-repeat="opt in list.fill" value="{{ opt.val }}">{{
                 opt.title
               }}</option>
@@ -147,8 +216,13 @@
         </tr>
       </div>
     </div>
-    <div class="col-lg-12 container pull-right">
-      <input type="submit" value="Daftar" class="btn btn-success" />
+    <div class="col-lg-12 container pull-right" data-aos="fade-right">
+      <input
+        class="btn btn-md btn-sbt"
+        type="submit"
+        value="Daftar"
+        class="btn btn-success"
+      />
     </div>
   </form>
 </div>

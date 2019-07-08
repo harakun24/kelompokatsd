@@ -1,9 +1,6 @@
 <div ng-controller="akademik">
   <!--List Prodi-->
-  <div
-    class="container panel panel-success prog-akademik"
-    style="background-color: rgba(0, 128, 0, 0.267);"
-  >
+  <div class="container-fluid prog-akademik">
     <h4>Program Akademik</h4>
     <div ng-repeat="list in daftar" class="row">
       <h5 style="text-align: center" class="col-lg-12">
@@ -13,6 +10,7 @@
       <div
         class="panel col-lg-2 col-md-3 col-sm-4 panel-default display-prodi"
         ng-repeat="lit in list.isi"
+        data-aos="zoom-in"
       >
         <h6>
           <b>{{ lit.prodi }}</b>
@@ -33,37 +31,39 @@
   </div>
 
   <!--informasi akademik-->
-  <div class="row container-fluid">
+  <div class="container-fluid iakad" >
     <div
       class="panel panel-info col-lg-3 menu-3 col-md-4"
       ng-repeat="list in info"
+      data-aos="fade-right"
     >
       <h4>{{ list.title }}</h4>
-      <p>dipublikasikan tanggal {{ list.tanggal }}</p>
-      <a ui-sref="{{ list.url }}">pergi</a>
+      <sup>dipublikasikan {{ list.tanggal }}</sup>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ list.url }}</p>
     </div>
   </div>
 
   <!--info kampus-->
-  <div class="row" style="background-color: yellow">
+  <div class="row">
     <div class="container col-lg-4">
       <h4>Info Kampus</h4>
-      <div class="panel panel-primary" ng-repeat="list in kampus">
-        ini konten ke-{{ list }}
-      </div>
+      <li class="row eh" ng-repeat="list in kampus" data-aos="zoom-out-left">
+      <a href="#">  {{ list }}</a>
+      </li>
     </div>
-    <div class="col-lg-8">
-      <h1>
-        <strike> kawan sudah mudik</strike><sub> Kalender dan Jadwal</sub>
-      </h1>
+    <div class="col-lg-8 jadu" data-aos="zoom-in">
+      <h4>
+        Kalender dan Jadwal
+      </h4>
       <div
-        class="col-lg-4 panel"
+        class="col-lg-4 panel btn btn-g"
         ng-repeat="list in jadwal"
         style="margin-left:10%"
+
       >
-        <h4>
+        <h4></h4>
           <a href="{{ list.url }}">{{ list.name }}</a>
-        </h4>
+        </h4">
       </div>
     </div>
   </div>

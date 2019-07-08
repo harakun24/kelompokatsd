@@ -17,19 +17,19 @@ var home = {
   ],
   info: [
     {
-      title: "satu",
+      title: "KOMA Mengunjungi NET TV, Ini Talk Show",
       fill:
-        "dasdasd asda sdas dasd asd asd a aeh eg ea fae fef  ef aef ae  aef af awd ad d ad awd awd awd g aw aw g w ad awdawdawdawd dawd awd wd awdawdawdadw aw dawd awd  awdawdawd wad awd ad awd wdaw d adawdawdaw dad awd awd awd e"
+        "peserta KOMATOUR mengunjungi salah satu stasiun televisi Indonesia yaitu NET TV, yang ada di Jakarta. Di sana, peserta KOMATOUR dapat belajar banyak hal, seperti penjelasan-penjelasan mengenai NET TV dan pengetahuan-pegetahuan lainnya yang berhubungan dengan dunia pertelevisian."
     },
     {
-      title: "dua",
+      title: "Pelatihan Olah Data Statistik Prodi Ekonomi",
       fill:
-        "dasdasd asda sdas dasd asd asd a aeh eg ea fae fef  ef aef ae  aef af awd ad d ad awd awd awd g aw aw g w ad awdawdawdawd dawd awd wd awdawdawdadw aw dawd awd  awdawdawd wad awd ad awd wdaw d adawdawdaw dad awd awd awd e"
+        "Program Studi Ekonomi Universitas AMIKOM Yogyakarta mengadakan pelatihan olah data statistik menggunakan program STATA (Selasa, 29 Januari 2019). Pelatihan ini dipandu oleh Randi Kurniawan SE., M.Sc dari lembaga INSPECT Multi Konsultan. Agenda ini diikuti oleh Dosen-dosen Program Studi Ekonomi."
     },
     {
-      title: "tiga",
+      title: "Menjadi Mahasiswa Erasmus di Spanyol",
       fill:
-        "dasdasd asda sdas dasd asd asd a aeh eg ea fae fef  ef aef ae  aef af awd ad d ad awd awd awd g aw aw g w ad awdawdawdawd dawd awd wd awdawdawdadw aw dawd awd  awdawdawd wad awd ad awd wdaw d adawdawdaw dad awd awd awd e"
+        "Irwan Oyong adalah mahasiswa Universitas AMIKOM Yogyakarta yang kini sedang menjalani  program pertukaran mahasiswa di Murcia, Spanyol. Mahasiswa semester 5 jurusan Magister Teknik Informatika ini adalah wakil dari Indonesia dalam program Erasmus+ International Credit Mobility."
     }
   ],
   update: [
@@ -190,22 +190,38 @@ var akademik = {
   ],
   info: [
     {
-      title: "ini berita pertama",
+      title: "Recruitment Student Staff DAAK Universitas Amikom Yogyakarta",
       tanggal: "02 januari 2019",
-      url: "berita(1)"
+      url:
+        "Dalam rangka memberi pengalaman kepada mahasiswa dalam menghadapi dunia kerja, maka Bagian DAAK UNIVERSITAS AMIKOM YOGYAKARTA  membuka kesempatan bagi mahasiswa AMIKOM untuk menjadi student staff"
     },
     {
-      title: "ini berita kedua",
+      title: "Oprec Pengurus KOMA Periode 2019/2020",
       tanggal: "24 Februari 2019",
-      url: "berita(2)"
+      url: `Pendaftaran bisa kamu lakukan di koma.or.id/oprecpengurus 
+      Mulai tanggal 24 juni dan terakhir pendaftaran tanggal 10 Juli 2019.
+      Dan wawancara tanggal 14 Juli 2019.
+      Jangan sampai kelewatan guys!!
+      .
+      Cp : 0856-0019-9239 (Farida)`
     },
     {
-      title: "ini berita ketiga",
+      title: "Informasi Uji Kompetensi Sertifikasi BNSP",
       tanggal: "06 April 2019",
-      url: "berita(3)"
+      url:
+        "Diumumkan kepada Peserta Uji Kompetensi dan seluruh Mahasiswa Universitas Amikom Yogyakarta, bahwa Uji Kompetensi Sertifikasi BNSP untuk Skema Video Editing, Junior Web Programming dan Junior Network Administration."
     }
   ],
-  kampus: [1, 2, 3, 4, 5, 6, 7, 8],
+  kampus: [
+    "Pengumuman Pelaksanaan Ujian Pendadaran dan Yudisium untuk Wisuda Periode 72",
+    "Recruitment Student Staff Laboratorium Universitas AMIKOM Yogyakarta",
+    "Dialog Program Studi MI dan SI",
+    "Seminar Nasional Informatika",
+    "Digitalent National Talk",
+    "Pengumuman Hasil TEST ISEST Mei 2019",
+    "Perayaan Paskah IKNA 2019",
+    "Data Peserta Test ISEST Periode Mei 2019"
+  ],
   jadwal: [
     {
       name: "Jadwal Kuliah",
@@ -614,7 +630,7 @@ var daftar = {
   ],
   menu: [
     {
-      name: "Alur Pendaftaran",
+      name: "Alur",
       link: "http://pmb.amikom.ac.id/images/alur.png",
       icon: "1"
     },

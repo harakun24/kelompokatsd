@@ -14,19 +14,21 @@
     </div>
   </div>
   <div class="container row">
-    <div class="card col-lg-12" ng-repeat="list in dosen.nilai">
+    <div class="card col-lg-12 ff" ng-repeat="list in dosen.nilai">
       <div class="card-title">
         <h4>{{ list.title }}-{{ list.prodi }}</h4>
       </div>
-      <div class="card-text">
-        <div class="card col-lg-4" ng-repeat="arr in list.isi">
+      <div
+        class="card-text"
+        style="display: flex;
+      justify-content: center;"
+      >
+        <div class="card col-lg-4 ffg" ng-repeat="arr in list.isi">
           <div class="card-title">
             <h5>{{ arr.judul }}</h5>
-          </div>
-          <div class="card-text">
             <i>{{ arr.tanggal }}</i>
           </div>
-          <button class="btn btn-dark col-lg-4">Download</button>
+          <button class="btn col-lg-4">Download</button>
         </div>
       </div>
     </div>

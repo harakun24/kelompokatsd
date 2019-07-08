@@ -1,25 +1,40 @@
-<div class="container">
-  <div class="panel col-lg-10 panel-default">
-    <form ng-submit="tes()">
-      <table>
-        <tr>
-          <td>user ID</td>
-          <td><input type="text" ng-model="temp.user" required /></td>
-        </tr>
-        <tr>
-          <td>Password</td>
-          <td><input type="password" ng-model="temp.pass" /></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <input type="checkbox" name="" id="" required />
-            Saya setuju untuk bla bla bla
-          </td>
-        </tr>
-      </table>
+<div class="container top-lgin">
+  <div class="card col-lg-4 lgin">
+    <card-body>
+      <form ng-submit="tes()">
+        <table>
+          <tr>
+            <td>user ID</td>
+            <td>
+              <input
+                type="text"
+                ng-model="temp.user"
+                class="form-control"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>
+              <input
+                type="password"
+                ng-model="temp.pass"
+                class="form-control"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="pull-right">
+              <input type="checkbox" name="" id="" required />
+              Setuju
+            </td>
+          </tr>
+        </table>
 
-      <button value="submit">MASUK</button>
-    </form>
+        <button value="submit" class="btn btn-md pull-right">MASUK</button>
+      </form>
+    </card-body>
   </div>
 </div>

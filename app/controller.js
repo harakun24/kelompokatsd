@@ -39,6 +39,7 @@ app.controller("award", $scope => {
 });
 app.controller("prodi", $scope => {
   $scope.daftar = prodi;
+  $scope.kampus = akademik.kampus;
 });
 app.controller("daftar", $scope => {
   $scope.gel = daftar.gel;

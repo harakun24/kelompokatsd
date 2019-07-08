@@ -4,6 +4,7 @@
     id="carouselExampleIndicators"
     class="carousel slide"
     data-ride="carousel"
+    data-interval="2000"
   >
     <div class="carousel-inner">
       <div class="carousel-item">
@@ -21,7 +22,7 @@
               {{ news[0].title }}
             </h3>
             <p>
-              {{ news[0].cnt }}
+              &nbsp;&nbsp;&nbsp;&nbsp;{{ news[0].cnt }}
             </p>
             <button
               class="btn btn-md  pull-right"
@@ -48,7 +49,7 @@
               {{ news[1].title }}
             </h3>
             <p>
-              {{ news[1].cnt }}
+              &nbsp;&nbsp;&nbsp;&nbsp;{{ news[1].cnt }}
             </p>
             <button
               class="btn btn-md  pull-right"
@@ -75,7 +76,7 @@
               {{ news[2].title }}
             </h3>
             <p>
-              {{ news[2].cnt }}
+              &nbsp;&nbsp;&nbsp;&nbsp; {{ news[2].cnt }}
             </p>
             <button
               class="btn btn-md  pull-right"
@@ -91,42 +92,49 @@
   </div>
 
   <!--info kampus-->
-  <div class="row container-fluid">
+  <div class="row container-fluid inf">
     <div class="panel panel-info col-lg-3 menu-3" ng-repeat="list in info">
-      <h1>{{ list.title }}</h1>
-      <p>{{ list.fill }}</p>
-      <a href="#">dawdawd</a>
+      <h3>{{ list.title }}</h3>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ list.fill }}</p>
     </div>
-    <button class="btn btn-sm btn-info pull-right">selengkapnya</button>
   </div>
 
   <!--pmb-->
-  <div class="row container-fluid pmb ">
-    <div class="col-lg-8">
-      <h1>Ini menu PMB</h1>
+  <div class="row"></div>
+  <div
+    class="container-fluid pmb "
+    style="height: 200px;"
+    id="homepmb"
+    data-aos="fade-left"
+  >
+    <div class="col-lg-8" style="color:white;">
+      <h1>PMB 2019/2020</h1>
       <p>
-        ini adalah deskripsi awdnawldnlwd wdnawd addanwdad amwdlandanwd wdjmad
-        adwda ddiaw dawd po ionion necn aefjapofn fofln fnwflanf jgpenfk ranr
-        fnaefn femnf.
+        Selamat Datang di Website Penerimaan Mahasiswa Baru (PMB) UNIVERSITAS
+        AMIKOM Yogyakarta Melalui Website ini Anda dapat mendapatkan informasi
+        Program Studi, biaya, beasiswa, jadwal kegiatan, pendaftaran secara
+        online dan informasi lain yang terkait. Sebelum melakukan pendaftaran
+        silahkan baca informasi terlebih dahulu
       </p>
     </div>
     <div class="col-lg-4 info-pmb r">
-      <p>Sepertinya anda tertarik! klik link berikut</p>
-      <button ui-sref="info-pmb()" class="btn btn-info">
-        info selengkapnya
+      <button ui-sref="info-pmb()" class="btn btn-lg">
+        Syarat Pendaftaran
       </button>
-      <p>Mau langsung daftar? Yuk mari...</p>
-      <button ui-sref="daftar()" class="btn btn-primary">
-        Pendaftaran baru
+      <p>
+        &nbsp;
+      </p>
+      <button ui-sref="registrasi()" class="btn btn-lg">
+        link pendaftaran
       </button>
     </div>
   </div>
 
   <!--update-->
   <div class="row container-fluid">
-    <div class="col-lg-12 update panel">
+    <div class="col-lg-12 update">
       <h4>E-learning Update</h4>
-      <span class="col-lg-3" ng-repeat="list in update">
+      <span class="col-lg-3" ng-repeat="list in update" data-aos="zoom-in">
         <h1 ui-sref="{{ list.url }}">{{ list.title }}</h1>
         <p>{{ list.unit }}</p>
       </span>

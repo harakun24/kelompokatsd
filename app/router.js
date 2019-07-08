@@ -21,6 +21,12 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
       templateUrl: "./app/view/akademik.html"
     })
     .state({
+      name: "bonus",
+      url: "/bonus",
+      replace: true,
+      templateUrl: "./app/view/bonus.html"
+    })
+    .state({
       name: "profil",
       url: "/profil",
       replace: true,

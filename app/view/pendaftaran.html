@@ -5,6 +5,7 @@
       id="carouselExampleIndicators"
       class="carousel slide"
       data-ride="carousel"
+      data-interval="2000"
     >
       <ol class="carousel-indicators">
         <li
@@ -17,53 +18,48 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active sheight">
-          <img class="d-block w-100" src="../images/2.jpg" alt="First slide" />
+          <img
+            class="d-block w-100"
+            src="../images/pmd/2.png"
+            alt="First slide"
+          />
         </div>
         <div class="carousel-item sheight">
-          <img class="d-block w-100" src="../images/3.jpg" alt="Second slide" />
+          <img
+            class="d-block w-100"
+            src="../images/pmd/3.png"
+            alt="Second slide"
+          />
         </div>
         <div class="carousel-item sheight">
-          <img class="d-block w-100" src="../images/4.jpg" alt="Third slide" />
+          <img
+            class="d-block w-100"
+            src="../images/pmd/1.png"
+            alt="Third slide"
+          />
         </div>
       </div>
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="container col-lg-8 panel-info panel pmb-panel">
+  <div class="container-fluid pmb-her">
+    <div class="container col-lg-8 panel pmb-panel">
       <h4>Pendaftaran Reguler D3-S1</h4>
       <div
-        class="panel panel-info col-lg-3 col-md-3 col-sm-3 pmb"
+        class="panel col-lg-3 col-md-3 col-sm-3 pmb-p"
         ng-repeat="list in gel"
+        data-aos="fade-right"
       >
         <h5>GELOMBANG {{ list.name }}</h5>
         {{ list.from }} s/d {{ list.till }}
       </div>
-      <a href="#" class="btn btn-success"> Selengkapnya</a>
+
       <h4>Pendaftaran Alih Jalur S1</h4>
-      <div class="panel panel-info col-lg pmb">
+      <div class="panel panel-info col-lg pmb-p" data-aos="fade-right">
         <h5>ALIH JALUR</h5>
         01-07-2018 s/d 01-10-2018
       </div>
     </div>
-    <div class="container pmb-panel col-lg-4 panel panel-info side">
+    <div class="container pmb-panel col-lg-4 panel side" data-aos="fade-left">
       <p><a ui-sref="registrasi()">Pendaftaran D3 & S1</a></p>
       <p><a ui-sref="#">Pendaftaran S1 Alih Jalur</a></p>
       <p><a ui-sref="#">Jadwal PMB</a></p>
@@ -71,11 +67,14 @@
       <p><a ui-sref="#">Kelulusan</a></p>
       <p><a ui-sref="#">Statistik</a></p>
     </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="col-lg-2 panel panel-info" ng-repeat="list in menu">
-      <a href="{{ list.link }}">{{ list.name }}</a>
+    <div class="container col-lg-4 side">
+      <div
+        class="col-lg-3 panel panel-info"
+        ng-repeat="list in menu"
+        data-aos="fade-left"
+      >
+        <a href="{{ list.link }}">{{ list.name }}</a>
+      </div>
     </div>
   </div>
 </div>
