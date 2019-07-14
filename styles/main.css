@@ -44,6 +44,12 @@ body {
   margin-left: 30px;
 }
 
+.pann input,
+.pann select,
+.pann textarea {
+  width: 300px;
+}
+
 .fff {
   background: url(../images/mikom.png);
   height: 150vh;
@@ -441,6 +447,10 @@ body {
   color: #5d0697;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .gbr {
   width: 180px;
   height: 180px;
@@ -527,7 +537,39 @@ body {
 }
 
 .thead-purple {
-  background: #1f0052;
+  background: #c188ff;
+  color: white;
+}
+
+.oo {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.oo li {
+  list-style: none;
+  margin: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.uiu {
+  width: 120%;
+}
+
+.uiu[bag="spras"] li:hover {
+  background: #d6950aaf;
+}
+
+.uiu li {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.uiu li:hover {
+  background: #690ad6af;
+}
+
+.uiu li:hover a {
   color: white;
 }
 
@@ -598,6 +640,45 @@ body {
   position: relative;
   left: -17%;
   top: -10px;
+}
+
+.memangbujank[mhs="ya"] {
+  left: 50%;
+  margin-bottom: 30vh;
+}
+
+#paymenttbl td {
+  padding: 5px;
+}
+
+#paymenttbl td input[class="form-controll"] {
+  width: 180px;
+  height: 30px;
+}
+
+.mmorpg {
+  height: 40vh;
+  margin-top: 10px;
+  overflow: scroll;
+}
+
+.mmorpg .col-lg-3 {
+  margin-left: 6%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.mmorpg .col-lg-3 img {
+  width: 100%;
 }
 
 .awal {
@@ -950,12 +1031,8 @@ body {
 }
 
 .ff:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#5b15dd8e), to(transparent));
-  background: linear-gradient(90deg, #5b15dd8e, transparent);
-}
-
-.ff:hover h4 {
-  color: white;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.253);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.253);
 }
 
 .ffg {

@@ -32,7 +32,13 @@ body {
   &[posisi="dua"] {
     margin-left: 30px;
   }
+  input,
+  select,
+  textarea {
+    width: 300px;
+  }
 }
+
 .fff {
   background: url(../images/mikom.png);
   height: 150vh;
@@ -314,6 +320,9 @@ body {
     color: rgb(93, 6, 151);
   }
 }
+a:hover {
+  text-decoration: none;
+}
 .gbr {
   width: 180px;
   height: 180px;
@@ -369,8 +378,34 @@ body {
   color: white;
 }
 .thead-purple {
-  background: #1f0052;
+  background: #c188ff;
   color: white;
+}
+.oo {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  li {
+    list-style: none;
+    margin: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+  }
+}
+.uiu {
+  width: 120%;
+  &[bag="spras"] {
+    li:hover {
+      background: #d6950aaf;
+    }
+  }
+  li {
+    transition: 0.5s;
+    &:hover {
+      background: #690ad6af;
+      a {
+        color: white;
+      }
+    }
+  }
 }
 .navik {
   & > li {
@@ -422,10 +457,40 @@ body {
   width: 120px;
   margin-left: 0;
 }
+
 .memangbujank {
   position: relative;
   left: -17%;
   top: -10px;
+  &[mhs="ya"] {
+    left: 50%;
+    margin-bottom: 30vh;
+  }
+}
+#paymenttbl {
+  td {
+    padding: 5px;
+    input[class="form-controll"] {
+      width: 180px;
+      height: 30px;
+    }
+  }
+}
+.mmorpg {
+  height: 40vh;
+  margin-top: 10px;
+  overflow: scroll;
+  .col-lg-3 {
+    margin-left: 6%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
 }
 .awal {
   background: transparent;
@@ -684,10 +749,7 @@ body {
   background: linear-gradient(90deg, transparent, transparent);
   margin-bottom: 10px;
   &:hover {
-    background: linear-gradient(90deg, #5b15dd8e, transparent);
-    h4 {
-      color: white;
-    }
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.253);
   }
 }
 .ffg {

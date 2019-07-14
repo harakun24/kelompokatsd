@@ -102,8 +102,8 @@ var nav = {
       url: "alm()"
     },
     {
-      name: "orang tua",
-      url: "ortu()"
+      name: "Sarpras",
+      url: "spras()"
     }
   ],
   menu: [

@@ -59,6 +59,11 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
       templateUrl: "./app/view/prodi.html"
     })
     .state({
+      name: "eso",
+      url: "/Slip_online",
+      templateUrl: "./app/view/eso.html"
+    })
+    .state({
       name: "kuliah",
       url: "/mhs/kuliah",
       templateUrl: "./app/view/kmhs.html"
@@ -66,12 +71,22 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     .state({
       name: "org",
       url: "/org",
-      templateUrl: "./app/view/org.html"
+      templateUrl: "./app/view/organisasi.html"
+    })
+    .state({
+      name: "spras",
+      url: "/sarana_prasarana",
+      templateUrl: "./app/view/spras.html"
     })
     .state({
       name: "loginmhs",
       url: "/mhs/login",
       templateUrl: "./app/view/lmhs.html"
+    })
+    .state({
+      name: "sarat",
+      url: "/mhs/Syarat_Pendafatar",
+      templateUrl: "./app/view/syarat.html"
     })
     .state({
       name: "berandamhs",

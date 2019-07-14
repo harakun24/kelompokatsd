@@ -3,37 +3,34 @@
   <div class="container-fluid pull-right">
     <a ui-sref="chkm()">back</a>
   </div>
-  <div class="card col-lg-6 pull-right ">
-    <div class="nav navik">
-      <li class="nav-item">
-        <a class="nav-link" ng-click="nav(1)">Rencana Studi(KRS)</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ng-click="nav(2)">Kartu Hasil Studi</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ng-click="nav(3)">Transkrip Nilai</a>
-      </li>
-    </div>
-  </div>
 
   <div class="container row panel">
     <div class="row container khs">
-      <div class="container row col-lg-3">
+      <div class="container row col-lg-3 pull-right memangbujank" mhs="ya">
         <div class="container col-lg-6">
           <b class="col-lg-12">Semester</b>
           <select
             ng-model="smt"
             ng-options="list for list in semester"
+            class="form-control carimat"
+            style="height: 40px;"
           ></select>
         </div>
         <div class="container col-lg-6">
           <b class="col-lg-12">Tahun</b>
-          <select ng-model="thn" ng-options="list for list in tahun"></select>
+          <select
+            ng-model="thn"
+            ng-options="list for list in tahun"
+            class="form-control carimat"
+            style="height: 40px;"
+          ></select>
         </div>
       </div>
-      <table class="table table-striped col-lg-12">
-        <thead class="thead-dark">
+      <div class="col-lg-3" style="left:55%;top:12px;">
+        <button class="btn btn-md bg-warning" id="unlok">Tamplikan</button>
+      </div>
+      <table class="table table-striped col-lg-12" style="display:none">
+        <thead>
           <tr>
             <th>NO.</th>
             <th>KODE</th>
@@ -120,13 +117,20 @@
             <td>2</td>
             <td>A</td>
           </tr>
-          <tr>
-            <td colspan="2">
-              <button class="btn btn-outline-warning">PRINT KHS</button>
+          <tr style="border: none">
+            <td colspan="2" rowspan="2">
+              <button class="btn btn-outline-warning" style="margin-top:20px;">
+                PRINT KHS
+              </button>
             </td>
             <td></td>
-            <td>Jumlah SKS:24</td>
-            <td>Index Prestasi:3.83</td>
+            <td>Jumlah SKS</td>
+            <td>24</td>
+          </tr>
+          <tr style="background:white;border:none">
+            <td></td>
+            <td>Index Prestasi</td>
+            <td>3.86</td>
           </tr>
         </tbody>
       </table>

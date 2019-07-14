@@ -1,0 +1,213 @@
+<div class="container-fluid">
+  <div class="panel">
+    <li style="list-style: none;margin-top:10px">
+      Layanan Slip Pembayaran Online STMIK AMIKOM Yogyakarta
+      <ol>
+        <li>Pilihlah jenis kewajiban pembayaran dengan mencentang checkbox.</li>
+        <li>Jumlah maksimal jenis pembayaran adalah 4 item.</li>
+        <li>
+          Khusus item pembayaran SPP Variabel dan Biaya Perkuliahan Perbaikan,
+          isikan jumlah SKS yang diambil.
+        </li>
+        <li>
+          Tekan tombol preview untuk melihat item-item yang sudah dipilih.
+        </li>
+        <li>
+          Tekan tombol revisi jika ingin melakukan perubahan dan Tekan tombol
+          cetak jika ingin mencetak slip pembayaran online.
+        </li>
+        <li>
+          Hasil printout digunakan untuk melakukan pembayaran di Bank Muamalat
+          STMIK AMIKOM sesuai dengan nominal yang tertera dan tanggal
+          berlakunya.
+        </li>
+        <li>
+          Jika sudah melewati tanggal berlaku slip, pembayaran anda akan ditolak
+          dan anda harus mengulang langkah dari awal.
+        </li>
+      </ol>
+    </li>
+    <li style="list-style: none;color: red;">
+      catatan
+      <ul>
+        <li>Nominal yang dibayarkan harus sesuai dengan nominal pada slip</li>
+        <li>Perhatikan tanggal berlaku slip</li>
+      </ul>
+    </li>
+  </div>
+  <div class="col-lg-12" style="display: flex;justify-content:center">
+        <table id="paymenttbl" class="">					
+                <tbody><tr><td colspan="3"></td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr>
+                    <td><input type="checkbox" id="1" name="1" value="1" onclick="getchecked(this)" disabled=""></td>					
+                    <td><label id="lbl1">SPP Tetap</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar1" name="SPP-Tetap" class="justread curtext" readonly="readonly" value="1.675.000" type="text">                            
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="2" name="2" value="2" onclick="getchecked(this)" disabled=""></td>					
+                    <td><label id="lbl2">SPP Variabel</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar2" name="SPP-Variabel" class="justread curtext" readonly="readonly" value="0" type="text">  
+                    <td>
+                        =
+                    </td>       
+                    <td>
+                            <input class="form-control" onfocus="numfocus(this,'#bayar2')" onblur="numblur(this)" onkeyup="setsppvar('#bayar2','#sks2','#biayadasar2')" id="sks2" type="text" name="sks2" value="0" class="curtext" style="width: 30px;"> 
+                    </td>
+                    <td>
+                            SKS  X
+                    </td>
+                    <td>
+                            <input class="form-control" type="text" readonly="readonly" id="biayadasar2" name="biayadasar2" class="justread curtext" value="90.000" style="width: 100px;">							
+                    
+                    </td>
+                     </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="3" name="3" value="3" onclick="getchecked(this)" disabled=""></td>					
+                    <td><label id="lbl3">Biaya Sarana dan Prasarana</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar3" name="Biaya-Sarana-dan-Prasarana" class="curtext" onkeyup="numformat('#bayar3')" ;="" value="0" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                        <td><input type="checkbox" id="2" name="2" value="2" onclick="getchecked(this)" disabled=""></td>					
+                        <td><label id="lbl2">Biaya Perkuliahan perbaikan</label></td>
+                        <td>							
+                            <input class="form-control" id="bayar2" name="SPP-Variabel" class="justread curtext" readonly="readonly" value="0" type="text">  
+                        <td>
+                            =
+                        </td>       
+                        <td>
+                                <input class="form-control" onfocus="numfocus(this,'#bayar2')" onblur="numblur(this)" onkeyup="setsppvar('#bayar2','#sks2','#biayadasar2')" id="sks2" type="text" name="sks2" value="0" class="curtext" style="width: 30px;"> 
+                        </td>
+                        <td>
+                                MK   X
+                        </td>
+                        <td>
+                                <input class="form-control" type="text" readonly="readonly" id="biayadasar2" name="biayadasar2" class="justread curtext" value="90.000" style="width: 100px;">							
+                        
+                        </td>
+                         </td>
+                    </tr>					
+                <tr>
+                    <td><input type="checkbox" id="5" name="5" value="5" onclick="getchecked(this)"></td>					
+                    <td><label id="lbl5">Herregistrasi Tinggal Pendadaran</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar5" name="Herregistrasi-Tinggal-Pendadaran" class="justread curtext" readonly="readonly" value="100.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="6" name="6" value="6" onclick="getchecked(this)"></td>					
+                    <td><label id="lbl6">Herregistrasi Tinggal Wisuda</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar6" name="Herregistrasi-Tinggal-Wisuda" class="justread curtext" readonly="readonly" value="100.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="7" name="7" value="7" onclick="getchecked(this)"></td>					
+                    <td><label id="lbl7">Cuti</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar7" name="Cuti" class="justread curtext" readonly="readonly" value="100.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="8" name="8" value="8" onclick="getchecked(this)"></td>					
+                    <td><label id="lbl8">Biaya Wisuda</label></td>
+                    <td>							
+                        <input class="form-control" id="bayar8" name="Biaya-Wisuda" class="justread curtext" readonly="readonly" value="1.350.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="D" name="D" value="D" onclick="getchecked(this)"></td>					
+                    <td><label id="lblD">Dicutikan</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarD" name="Dicutikan" class="justread curtext" readonly="readonly" value="200.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="E" name="E" value="E" onclick="getchecked(this)"></td>					
+                    <td><label id="lblE">Pengunduran Diri</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarE" name="Pengunduran-Diri" class="justread curtext" readonly="readonly" value="100.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="F" name="F" value="F" onclick="getchecked(this)"></td>					
+                    <td><label id="lblF">Pendadaran</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarF" name="Pendadaran" class="justread curtext" readonly="readonly" value="50.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="G" name="G" value="G" onclick="getchecked(this)"></td>					
+                    <td><label id="lblG">Ujian Susulan</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarG" name="Ujian-Susulan" class="curtext" onkeyup="numformat('#bayarG')" ;="" value="0" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="L" name="L" value="L" onclick="getchecked(this)"></td>					
+                    <td><label id="lblL">Biaya Salinan Kwitansi</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarL" name="Biaya-Salinan-Kwitansi" class="justread curtext" readonly="readonly" value="5.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="M" name="M" value="M" onclick="getchecked(this)"></td>					
+                    <td><label id="lblM">Biaya Lupa Password</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarM" name="Biaya-Lupa-Password" class="justread curtext" readonly="readonly" value="10.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="N" name="N" value="N" onclick="getchecked(this)"></td>					
+                    <td><label id="lblN">Biaya Cetak KTM Rusak</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarN" name="Biaya-Cetak-KTM-Rusak" class="justread curtext" readonly="readonly" value="20.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="U" name="U" value="U" onclick="getchecked(this)"></td>					
+                    <td><label id="lblU">Biaya KTM Hilang</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarU" name="Biaya-KTM-Hilang" class="justread curtext" readonly="readonly" value="50.000" type="text">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="Q" name="Q" value="Q" onclick="getchecked(this)"></td>					
+                    <td><label id="lblQ" style="font-weight: normal;">Biaya Legalisir</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarQ" name="Biaya-Legalisir" class="curtext" onkeyup="numformat('#bayarQ')" ;="" value="0" type="text" style="font-weight: normal;">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="T" name="T" value="T" onclick="getchecked(this)"></td>					
+                    <td><label id="lblT" style="font-weight: normal;">Tunggakan</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarT" name="Tunggakan" class="curtext" onkeyup="numformat('#bayarT')" ;="" value="0" type="text" style="font-weight: normal;">                                   
+                    </td>
+                </tr>					
+                <tr>
+                    <td><input type="checkbox" id="V" name="V" value="V" onclick="getchecked(this)"></td>					
+                    <td><label id="lblV" style="font-weight: normal;">Study visit kelas internasional</label></td>
+                    <td>							
+                        <input class="form-control" id="bayarV" name="Study-visit-kelas-internasional" class="justread curtext" readonly="readonly" value="7.500.000" type="text" style="font-weight: normal;">                                   
+                    </td>
+                </tr>					
+                                     <script type="text/javascript">$(document).ready(function(){$("#1").attr('disabled',true);});</script>  <script type="text/javascript">$(document).ready(function(){$("#2").attr('disabled',true);});</script>  <script type="text/javascript">$(document).ready(function(){$("#3").attr('disabled',true);});</script> 					<tr><td colspan="3"></td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>
+                        <input class="btn btn-md bg-warning" value="preview" id="btnpayment" type="button" name="Preview" disabled=""> <br><br>
+                        <input class="form-control" type="hidden" name="topay" id="kodegen" value="">							
+                    </td>
+                </tr>									
+            </tbody></table>
+  </div>
+</div>

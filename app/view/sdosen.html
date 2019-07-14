@@ -18,17 +18,22 @@
     </div>
   </div>
   <div class="row col-lg-4 dmenu">
-    <div class="col-lg-10 panel panel-info">
-      <a ui-sref="riwayat({id: id })">Riwayat</a>
-    </div>
-    <div class="col-lg-10 panel panel-info">
-      <a ui-sref="mdosen({id: id })">Materi Perkuliahan</a>
-    </div>
-    <div class="col-lg-10 panel panel-info">
-      <a ui-sref="jdosen({id: id })">Jadwal Mengajar</a>
-    </div>
-    <div class="col-lg-10 panel panel-info">
-      <a ui-sref="ndosen({id: id })">Nilai Perkuliahan</a>
-    </div>
+    <ul
+      class="list-group list-group-flush panel uiu"
+      style="box-shadow: 0 0 2px grey"
+    >
+      <li class="list-group-item">
+        <a ui-sref="riwayat({id: id })">Riwayat</a>
+      </li>
+      <li class="list-group-item">
+        <a ui-sref="mdosen({id: id })">Materi Perkuliahan</a>
+      </li>
+      <li class="list-group-item">
+        <a ui-sref="jdosen({id: id })">Jadwal Mengajar</a>
+      </li>
+      <li class="list-group-item">
+        <a ui-sref="ndosen({id: id })">Nilai Perkuliahan</a>
+      </li>
+    </ul>
   </div>
 </div>

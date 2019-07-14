@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amikom</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap4.css" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/aos.css" />
+
+    <script src="./js/angular.js"></script>
+    <script src="./js/ui-router.js"></script>
+    <script src="./js/ng-animate.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./js/query.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="./app/router.js?v=2"></script>
+    <script src="./app/model.js"></script>
+    <script src="./app/controller.js?v1"></script>
+    <script src="./js/aos.js"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body ng-app="app">
+    <div ng-controller="nav">
+      <!--menu user-->
+      <div class="container-fluid menu-user navbar navbar-expand-sm">
+        <ul class="nav navbar-nav ml-auto">
+          <li
+            class="nav-item"
+            ng-repeat="list in sign"
+            style="padding-left: 8px;"
+          >
+            <a ui-sref="{{ list.url }}" class="nav-link">{{ list.name }}</a>
+          </li>
+        </ul>
+      </div>
+      <!--nav kampus-->
+      <nav class="container-fluid menu-amikom navbar navbar-expand-sm">
+        <a
+          ui-sref="home()"
+          class="navbar-brand"
+          style="display: flex;align-items:center"
+        >
+          <img
+            src="./images/icon.png"
+            alt=""
+            class="d-inline-block align-top"
+            width="80%"
+          />
+        </a>
+
+        <ul class="nav navbar-nav pull-right ml-auto">
+          <li class="nav-item" ng-repeat="list in menu">
+            <a ui-sref="{{ list.url }}" class="nav-link">{{ list.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--isi konten-->
+    <div ui-view></div>
+
+    <!--footer-->
+    <div class="row panel-footer">
+      <div class="col-lg-3">
+        <p>
+          Copyright &#9400; 2019
+          <br />
+          UNIVERSITAS AMIKOM YOGYAKARTA
+          <br />
+          All Right Reserved
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <b> MENU</b>
+          <br />
+          Sitemap <br />Contact <br />English Version
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <b>LINKS </b>
+          <br />
+          University Link <br />
+          Suyanto Consulting <br />
+          Battle of Surabaya
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <b> UNIVERSITAS AMIKOM YOGYAKARTA</b>
+          <br />
+          Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman,
+          Yogyakarta
+
+          <br />
+          Telp: (0274) 884201 - 207
+
+          <br />
+          Fax: (0274) 884208 Kodepos: 55283
+
+          <br />
+          E-Mail: amikom@amikom.ac.id
+        </p>
+      </div>
+    </div>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
