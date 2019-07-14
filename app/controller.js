@@ -170,6 +170,10 @@ app.controller("kmhs", $scope => {
   $scope.name = localStorage.nama;
   $scope.semester = semester;
   $scope.tahun = tahun;
+  $("#unlok").click(function() {
+    $("table").css("display", "table");
+    $(".memangbujank").css("margin-bottom", "0px");
+  });
 });
 app.controller("pmhs", $scope => {
   $scope.user = localStorage.user;

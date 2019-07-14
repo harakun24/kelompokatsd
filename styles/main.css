@@ -221,7 +221,7 @@ body {
 }
 
 .form-control {
-  width: 30%;
+  width: 50%;
 }
 
 .pmb {
@@ -657,13 +657,13 @@ a:hover {
 }
 
 .mmorpg {
-  height: 40vh;
+  height: 60vh;
   margin-top: 10px;
   overflow: scroll;
 }
 
-.mmorpg .col-lg-3 {
-  margin-left: 6%;
+.mmorpg .col-lg-2 {
+  margin-left: 5%;
   height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -677,7 +677,7 @@ a:hover {
   overflow: hidden;
 }
 
-.mmorpg .col-lg-3 img {
+.mmorpg .col-lg-2 img {
   width: 100%;
 }
 

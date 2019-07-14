@@ -159,7 +159,7 @@ body {
   height: 50vh;
 }
 .form-control {
-  width: 30%;
+  width: 50%;
 }
 .pmb {
   background: #1f0052;
@@ -477,11 +477,11 @@ a:hover {
   }
 }
 .mmorpg {
-  height: 40vh;
+  height: 60vh;
   margin-top: 10px;
   overflow: scroll;
-  .col-lg-3 {
-    margin-left: 6%;
+  .col-lg-2 {
+    margin-left: 5%;
     height: 30vh;
     display: flex;
     justify-content: center;
