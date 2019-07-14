@@ -1,4 +1,4 @@
-<div class="container-fluid" style="margin-top:20px;">
+<div class="container-fluid" style="margin-top:20px;" ng-controller="sras">
   <div class="row col-lg-2 dmenu" style="margin-top: 20px;">
         <ul
         class="list-group list-group-flush panel uiu"
@@ -32,10 +32,16 @@
             </li>
       </ul>
   </div>
-  <div class="col-lg-8" style="margin-top:10px;">
-      <div class="col-lg-8" style="height: 60vh;">
+  <div class="col-lg-8" style="margin-top:10px; ">
+      <div class="col-lg-8" style="height: 60vh;margin-left:6%;">
           <img src="./images/org/spras.jpg" alt="" style="height: 100%">
       </div>
+  </div>
+  <div class="col-lg-2 ll" style="margin-top:20px">
+    <h4>Info Universitas</h4>
+    <li class="row eh" ng-repeat="list in kampus" data-aos="zoom-out-left">
+      <a href="#"> {{ list }}</a>
+    </li>
   </div>
   <div class="col-lg-12" style="margin-bottom: 20px;margin-top:20px;">
       <div class="card">
